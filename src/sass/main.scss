@@ -1,0 +1,14 @@
+// ===== utils =====
+@import "./utils/vars";
+@import "./utils/visually-hidden";
+
+// ===== componets ======
+@import "./components/container";
+@import "./components/buttons";
+@import "./components/modalWindow";
+
+// ====== layout =======
+@import "./layout/header";
+@import "./layout/main";
+@import "./layout/footer";
+

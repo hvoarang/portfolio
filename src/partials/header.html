@@ -1,0 +1,131 @@
+<header class="header">
+  <div class="container header__container">
+    <a class="logo header__logo" href="./index.html" lang="en"
+      ><span class="span">i</span>E<span class="span">.</span>D</a
+    >
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a class="nav__link" href="./index.html" aria-label="homepage"
+            >HOME</a
+          >
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#" aria-label="portfolio">PORTFOLIO</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#" aria-label="blog">BLOG</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="#" aria-label="blog">CONTACT</a>
+        </li>
+      </ul>
+    </nav>
+
+    <button
+      class="menu__btn js-open-menu"
+      type="button"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <svg class="menu__btn--icon" width="40" height="40">
+        <use href="./images/svg/icons.svg#menu-btn"></use>
+      </svg></button
+    ><button type="button" class="btn nav__button" data-modal-open>
+      FEEDBACK
+    </button>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal__close" data-modal-close>
+          <svg class="modal__close--icon" width="30" height="30">
+            <use href="./images/svg/icons.svg#close"></use>
+          </svg>
+        </button>
+
+        <form class="modal__form" name="registration-form" id="modal__form">
+          <strong class="modal__form--title">Contact with me</strong>
+          <div
+            class="modal__form--details"
+            role="group"
+            aria-labelledby="modal__form"
+          >
+            <div class="modal__form--field">
+              <label class="modal__form--label" for="name">Name</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                autocomplete="name"
+                class="modal__form--input"
+                placeholder="Name"
+              />
+              <svg class="form__input--icon" width="18" height="18">
+                <use href="./images/svg/icons.svg#person-black"></use>
+              </svg>
+            </div>
+
+            <div class="modal__form--field">
+              <label for="tel" class="modal__form-label">Phone</label>
+              <input
+                type="tel"
+                name="tel"
+                id="tel"
+                autocomplete="on"
+                class="modal__form--input"
+                placeholder="+380"
+              />
+              <svg class="form__input--icon" width="18" height="18">
+                <use href="./images/svg/icons.svg#phone-black"></use>
+              </svg>
+            </div>
+
+            <div class="modal__form--field">
+              <label for="email" class="modal__form--label">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                autocomplete="email"
+                class="modal__form--input"
+                placeholder="email@address.com"
+              />
+              <svg class="form__input--icon" width="18" height="18">
+                <use href="./images/svg/icons.svg#email-black"></use>
+              </svg>
+            </div>
+
+            <div class="modal__form--field">
+              <label for="comment" class="modal__form--label">Сomment</label>
+              <textarea
+                name="comment"
+                id="comment"
+                class="form__input--comment"
+                placeholder="Leave a comment"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="modal__form--checkbox">
+            <label class="form__label--agree">
+              <input
+                class="form__input--agree"
+                type="checkbox"
+                name="agree"
+                value="agree"
+              />
+
+              <svg class="label__agree--icon" width="16" height="15">
+                <use href="./images/svg/icons.svg#icon-check"></use>
+              </svg>
+
+              <span>I agree with the mailing and accept it</span>
+              <a href="#" class="label__agree--accent">agreement</a>
+            </label>
+          </div>
+
+          <button type="submit" class="modal__form--btn btn">SEND</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</header>
