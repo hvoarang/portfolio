@@ -10,7 +10,7 @@ $desctopScreen: 1200px;
 	margin: 0 auto;
 	overflow: clip;
 	// ===== Tablet screen 768px =====
-	@media screen and (min-width: $tabletScreen) {
+	@media screen and (min-width: 767px) {
 		max-width: $tabletScreen;
 	}
 	// ===== Desctop screen 1200px =====
