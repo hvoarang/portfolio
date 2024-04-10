@@ -76,7 +76,7 @@ link {
   background-color: transparent;
   border: none;
   margin-left: auto;
-  transition: color 250ms;
+  transition: 250ms;
   &:hover,
   &:focus {
     background-color: $blueHover;
