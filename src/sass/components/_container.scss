@@ -5,11 +5,13 @@ $desctopScreen: 1200px;
 
 .container {
 	// ===== Mobile screem 480px =====
-	min-width: $mobileScreen;
+	max-width: $mobileScreen;
 	padding: 0 15px;
-	margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
 	overflow: clip;
 	// ===== Tablet screen 768px =====
+
 	@media screen and (min-width: $tabletScreen) {
 		min-width: $tabletScreen;
 	}
@@ -18,26 +20,3 @@ $desctopScreen: 1200px;
 		min-width: $desctopScreen;
 	}
 }
-
-// .container {
-// 	// ===== Mobile screem 480px =====
-// 	max-width: 480px;
-
-// 	padding-left: 15px;
-// 	padding-right: 15px;
-
-// 	margin-left: auto;
-// 	margin-right: auto;
-
-// 	// outline: 1px solid red;
-
-// 	// ===== Tablet screen 768px =====
-// 	@media screen and (min-width: 768px) {
-// 		max-width: 768px;
-// 	}
-
-// 	// ===== Desctop screen 1200px =====
-// 	@media screen and (min-width: 1200px) {
-// 		max-width: 1200px;
-// 	}
-// }
