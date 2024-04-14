@@ -97,8 +97,10 @@
     line-height: 1.22;
     letter-spacing: 0.02em;
 
-    color: var(--accent-color);
+    color: $blackColor;
   }
+}
+.mobile__nav {
 }
 .mobile__socials--pos {
   position: relative;
