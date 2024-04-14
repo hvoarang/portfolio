@@ -1,0 +1,122 @@
+.main {
+  min-width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__list {
+  display: flex;
+  // display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero__item::before {
+  content: "iE.D";
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40vw;
+  font-weight: 800;
+
+  color: $secondaryColor;
+  opacity: 0.02;
+
+  z-index: 1;
+}
+.hero__item h1 {
+  color: $whiteColor;
+  font-size: 12vw;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -1px;
+  position: relative;
+  text-shadow: #bebebe 1px 0 30px;
+  z-index: 999;
+}
+.hero__item {
+  color: $secondaryColor;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -1px;
+
+  &:last-child {
+    text-align: right;
+  }
+}
+
+// =================== owner ===================
+
+.owner {
+  background-color: #fafafa;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  height: 920px;
+  width: 100%;
+
+  box-shadow: inset 0 0 22px 0 #696969;
+  z-index: 10;
+}
+
+.owner__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  position: relative;
+  height: 100%;
+}
+.owner__container::after {
+  content: "";
+  top: 10%;
+  left: 10%;
+  position: absolute;
+  border: 10px solid blue;
+  min-width: 960px;
+  height: 450px;
+  z-index: 1;
+}
+.owner__list {
+  background-color: #fafafa;
+  z-index: 10;
+}
+
+.owner__item h3 {
+  color: $mainColor;
+  font-family: inherit;
+  font-size: 58px;
+  font-weight: 800;
+  max-width: 320px;
+  line-height: 1.14;
+}
+
+.owner__item h6 {
+  color: $secondaryColor;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-top: 15px;
+}
+.owner__item::after {
+  content: "Dmitry Rafalovsky";
+  top: 76%;
+  left: 72%;
+  position: absolute;
+
+  font-size: 30px;
+  font-family: "Allura", cursive;
+  color: $secondaryColor;
+}
+.owner__field {
+  display: flex;
+  flex-direction: column;
+}
+.owner__img {
+  z-index: 10;
+  position: relative;
+  top: 50px;
+  left: 150px;
+}
