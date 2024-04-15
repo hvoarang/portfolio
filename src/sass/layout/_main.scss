@@ -12,28 +12,28 @@
   justify-content: center;
 }
 .hero__item::before {
+  position: absolute;
   content: "iE.D";
-  position: relative;
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 40vw;
   font-weight: 800;
-
   color: $secondaryColor;
   opacity: 0.02;
-
   z-index: 1;
 }
 .hero__item h1 {
   color: $whiteColor;
+  user-select: none;
   font-size: 12vw;
   font-weight: 800;
   line-height: 1.05;
   letter-spacing: -1px;
   position: relative;
   text-shadow: #bebebe 1px 0 10px;
-  z-index: 999;
+  z-index: 2;
+  text-align: center;
 }
 .hero__item {
   color: $secondaryColor;
