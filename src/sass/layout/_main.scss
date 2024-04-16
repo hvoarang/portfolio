@@ -119,3 +119,38 @@
   top: 50px;
   left: 150px;
 }
+.main {
+  position: relative;
+}
+
+.hero__container {
+  // display: flex;
+  color: white;
+  background-color: red;
+  font-weight: 800;
+  font-size: 12vw;
+
+  z-index: 5;
+  position: relative;
+}
+.main__hero {
+  min-width: auto;
+  background-color: #000;
+  // display: flex;
+  color: $whiteColor;
+  user-select: none;
+  font-size: 12vw;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -1px;
+  text-shadow: #bebebe 1px 0 10px;
+  z-index: 2;
+  text-align: center;
+  position: relative;
+  z-index: 3;
+  top: -100px;
+}
+.main__subtitle {
+}
+.main__title {
+}
