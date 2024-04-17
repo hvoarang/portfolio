@@ -1,6 +1,6 @@
 .main {
   min-width: 100%;
-  height: 100vh;
+  // height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -119,24 +119,22 @@
   top: 50px;
   left: 150px;
 }
-.main {
-  position: relative;
-}
+// .main {
+//   position: relative;
+// }
 
 .hero__container {
   // display: flex;
-  color: white;
-  background-color: red;
+  // color: white;
+  // background-color: red;
   font-weight: 800;
   font-size: 12vw;
-
   z-index: 5;
-  position: relative;
 }
 .main__hero {
   min-width: auto;
-  background-color: #000;
-  // display: flex;
+  // background-color: #000;
+  display: flex;
   color: $whiteColor;
   user-select: none;
   font-size: 12vw;
@@ -148,9 +146,21 @@
   text-align: center;
   position: relative;
   z-index: 3;
-  top: -100px;
 }
 .main__subtitle {
+  color: #9e9e9e;
+  font-size: 16px;
 }
 .main__title {
+}
+.main__hero--title {
+  content: "iE.D";
+  color: #9e9e9e;
+  opacity: 0.5;
+  z-index: 1;
+  font-size: 25vw;
+  font-weight: 800;
+  position: absolute;
+  top: 15%;
+  left: 27%;
 }
