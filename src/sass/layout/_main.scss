@@ -11,7 +11,7 @@
     transform: translate(-50%, -50%);
     font-size: 30vw;
     font-weight: 800;
-    opacity: 0.01;
+    opacity: 0.02;
   }
   /*--webkit--*/
   -webkit-box-pack: center;
@@ -51,7 +51,7 @@
         font-size: 12vw;
         text-align: center;
         text-transform: uppercase;
-        text-shadow: 10px 18px 35px rgba(88, 88, 88, 0.23);
+        text-shadow: 10px 10px 35px rgba(88, 88, 88, 0.23);
         transform: matrix(1.0110731102, 0, 0, 1.0110731102, 0, 0);
       }
       &--job {
