@@ -1,15 +1,26 @@
 .hero {
   &::before {
+    /*--webkit--*/
+    -webkit-transform: translate(-50%, -50%);
+    /*--< /webkit >--*/
+
     content: "iE.D";
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     font-size: 30vw;
     font-weight: 800;
-    opacity: 0.03;
+    opacity: 0.05;
   }
+  /*--webkit--*/
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-pack: center;
+  /*--< /webkit >--*/
+
   position: relative;
   display: flex;
   width: 100%;
@@ -23,10 +34,18 @@
     &-el {
       display: block;
       &--name {
+        /*--webkit--*/
+        -webkit-transform: translateX(-30px);
+        /*--< /webkit >--*/
+
         transform: translateX(-30px);
         opacity: 0;
       }
       &--description {
+        /*--webkit--*/
+        -webkit-transform: matrix(1.0110731102, 0, 0, 1.0110731102, 0, 0);
+        /*--< /webkit >--*/
+
         margin: 10px 0;
         color: $whiteColor;
         font-size: 12vw;
@@ -36,6 +55,10 @@
         transform: matrix(1.0110731102, 0, 0, 1.0110731102, 0, 0);
       }
       &--job {
+        /*--webkit--*/
+        -webkit-transform: translateX(30px);
+        /*--< /webkit >--*/
+
         transform: translateX(30px);
         text-align: right;
         opacity: 0;
