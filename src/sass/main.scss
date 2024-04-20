@@ -1,5 +1,6 @@
 // ===== utils =====
 @import "./utils/vars";
+@import "./utils/normalize";
 @import "./utils/visually-hidden";
 
 // ===== componets ======
@@ -10,5 +11,5 @@
 // ====== layout =======
 @import "./layout/header";
 @import "./layout/main";
+@import "./layout/persona";
 @import "./layout/footer";
-
