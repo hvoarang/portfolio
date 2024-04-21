@@ -55,4 +55,8 @@ svg {
 	display: block;
 	max-width: 100%;
 	height: auto;
+
+	overflow-clip-margin: content-box;
+	overflow: clip;
+	border: 0;
 }

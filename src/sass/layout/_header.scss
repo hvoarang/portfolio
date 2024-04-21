@@ -1,5 +1,5 @@
 .header {
-  box-shadow: 0 0 22px $secondaryColor;
+  box-shadow: 0 0 1.3rem $secondaryColor;
   overflow: clip;
 }
 .header__container {
@@ -12,14 +12,14 @@
   font-family: $fontThird, sans-serif;
   color: $mainColor;
   font-weight: 400;
-  font-size: 24px;
-  margin-right: 87px;
-  padding: 21px 0;
+  font-size: 1.5rem;
+  margin-right: 5.4rem;
+  padding: 1.3rem 0;
   @media screen and (min-width: $tabletScreen) {
-    margin-right: 91px;
+    margin-right: 5.6rem;
   }
   @media screen and (min-width: $desctopScreen) {
-    margin-right: 226px;
+    margin-right: 14.1rem;
   }
   & > span {
     color: $secondaryColor;
@@ -42,12 +42,12 @@
   display: flex;
 }
 .nav__item {
-  margin-right: 100px;
+  margin-right: 6.25rem;
   &:last-child {
     margin-right: 0;
   }
   @media screen and (max-width: $desctopScreen) {
-    margin-right: 46px;
+    margin-right: 2.8rem;
   }
   @media screen and (max-width: $tabletScreen) {
     display: none;
@@ -57,9 +57,9 @@
 .nav__link {
   display: block;
   font-weight: 500;
-  line-height: 1.14;
+  line-height: 1.14em;
   letter-spacing: 0.02em;
-  padding: 32px 0 32px 0;
+  padding: 2rem 0 2rem 0;
   position: relative;
   color: $secondaryColor;
 }
@@ -90,17 +90,15 @@
 .mobile__socials {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 1.25rem;
   & a {
     font-weight: 500;
-    font-size: 18px;
-    line-height: 1.22;
+    font-size: 1.1rem;
+    line-height: 1.22em;
     letter-spacing: 0.02em;
 
     color: $blackColor;
   }
-}
-.mobile__nav {
 }
 .mobile__socials--pos {
   position: relative;
@@ -112,14 +110,14 @@
   left: calc(100% + 10px);
   display: block;
   width: 1px;
-  height: 22px;
+  height: 1.3rem;
   border: 1px solid rgba(33, 33, 33, 0.2);
 }
 .contacts__link {
   display: flex;
   align-items: center;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 1.16;
   letter-spacing: 0.02em;
   color: $secondaryColor;
@@ -132,7 +130,7 @@
 }
 
 .contacts__icon {
-  margin-right: 10px;
+  margin-right: 0.6rem;
   fill: $secondaryColor;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -141,7 +139,7 @@
   fill: $blueHover;
 }
 .contacts__item {
-  padding-bottom: 20px;
+  padding-bottom: 1.25rem;
 }
 .contacts__item:last-child {
   padding: 0;

@@ -2,22 +2,23 @@
   position: relative;
   min-width: 100%;
   width: 100%;
-  height: 625px;
+  height: 39rem;
   background-color: $bgcGray;
   &__wrapper::before {
     content: "";
     position: absolute;
     opacity: 1;
-    inset: 45px 120px 45px 0px;
-    border-width: 10px;
+    inset: 3rem 9rem 3rem 0;
+    border-width: 0.5rem;
     border-style: solid;
-    border-color: rgb(32, 70, 242);
+    border-color: $border;
     border-image: initial;
+    border-radius: 0 6rem 0 2rem;
   }
   &__img {
-    max-width: 40%;
+    max-width: 23.4rem;
     position: absolute;
-    left: 45px;
+    left: 2.8rem;
     bottom: 0;
     z-index: 2;
   }
@@ -42,11 +43,12 @@
   &__content {
     position: relative;
     z-index: 1;
+    background-color: $bgcGray;
     &-signature {
       position: absolute;
-      bottom: -175px;
+      bottom: -10rem;
       left: 0;
-      font-size: 30px;
+      font-size: 2rem;
       font-family: "Allura", cursive;
     }
   }
@@ -62,11 +64,14 @@
   height: 100%;
   margin: 0 auto;
 }
+.blurb {
+  padding: 1.25rem 0;
+}
 .blurb__heading {
-  margin: 0 0 15px 0;
   color: $mainColor;
-  font-size: 58px;
+  font-size: 3.6rem;
   font-weight: 800;
+  line-height: 4.3rem;
   &__copy {
     font-weight: 700;
   }
