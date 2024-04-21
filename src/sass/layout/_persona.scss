@@ -4,6 +4,9 @@
   width: 100%;
   height: 39rem;
   background-color: $bgcGray;
+  @media screen and (max-width: $tabletScreen) {
+    display: flex;
+  }
   &__wrapper::before {
     content: "";
     position: absolute;
@@ -14,13 +17,30 @@
     border-color: $border;
     border-image: initial;
     border-radius: 0 6rem 0 2rem;
+    @media screen and (max-width: $tabletScreen) {
+      inset: 5rem 0rem 3rem 0;
+    }
+    @media screen and (max-width: $mobileScreen) {
+      border: none;
+    }
   }
   &__img {
-    max-width: 23.4rem;
+    width: 23.4rem;
     position: absolute;
     left: 2.8rem;
     bottom: 0;
     z-index: 2;
+    @media screen and (max-width: $desctopScreen) {
+    }
+    @media screen and (max-width: $tabletScreen) {
+      bottom: -3.75rem;
+      left: 50%;
+
+      transform: translateX(-50%);
+      /*--webkit--*/
+      -webkit-transform: translateX(-50%);
+      /*--< /webkit >--*/
+    }
   }
   &__wrapper {
     display: -webkit-box;
@@ -39,22 +59,55 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
+    @media screen and (max-width: $tabletScreen) {
+      right: 0;
+      bottom: 0;
+
+      /*--webkit--*/
+      -webkit-box-align: start;
+      -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+      -ms-grid-row-align: flex-start;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      /*--< /webkit >--*/
+
+      align-items: flex-start;
+      justify-content: center;
+    }
   }
   &__content {
     position: relative;
     z-index: 1;
     background-color: $bgcGray;
+    @media screen and (max-width: $tabletScreen) {
+      & {
+        text-align: center;
+      }
+    }
     &-signature {
       position: absolute;
       bottom: -10rem;
       left: 0;
       font-size: 2rem;
       font-family: "Allura", cursive;
+      @media screen and (max-width: $tabletScreen) {
+        position: static;
+        font-size: 1.5rem;
+      }
+    }
+    @media screen and (max-width: $desctopScreen) {
+      & {
+        text-align: center;
+      }
     }
   }
 }
+
 .wrapper--small {
-  width: 980px;
+  width: 61.25rem;
 }
 .wrapper,
 .wrapper--small,
@@ -66,14 +119,19 @@
 }
 .blurb {
   padding: 1.25rem 0;
-}
-.blurb__heading {
-  color: $mainColor;
-  font-size: 3.6rem;
-  font-weight: 800;
-  line-height: 4.3rem;
-  &__copy {
-    font-weight: 700;
+  &__heading {
+    color: $mainColor;
+    font-size: 3.6rem;
+    font-weight: 800;
+    line-height: 4.3rem;
+    @media screen and (max-width: $tabletScreen) {
+      font-size: 3rem;
+      line-height: 3.5rem;
+      margin: 0 1.5rem;
+    }
+    &__copy {
+      font-weight: 700;
+    }
   }
 }
 .no-margin {
