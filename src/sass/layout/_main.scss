@@ -12,8 +12,8 @@
     font-size: 30vw;
     color: $mainColor;
     font-weight: 800;
-    opacity: 0.05;
-    text-shadow: $blackColor -1.56rem -1.25rem -1.56rem;
+    opacity: 0.09;
+    text-shadow: $blackColor -25px -20px 35px;
   }
   /*--webkit--*/
   -webkit-box-pack: center;
@@ -33,7 +33,6 @@
     color: $secondaryColor;
     font-size: 0.87rem;
     font-weight: 800;
-    user-select: none;
     &-el {
       display: block;
       &--name {
@@ -54,7 +53,7 @@
         font-size: 11vw;
         text-align: center;
         text-transform: uppercase;
-        text-shadow: 0.6rem 0.6rem 2.1rem rgba(88, 88, 88, 0.23);
+        text-shadow: 1.6rem 1.6rem 2.1rem rgba(88, 88, 88, 0.23);
         transform: matrix(1.0110731102, 0, 0, 1.0110731112, 0, 0);
       }
       &--job {
