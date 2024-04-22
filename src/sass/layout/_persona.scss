@@ -1,7 +1,7 @@
 .persona {
   position: relative;
   min-width: 100%;
-  width: 100%;
+  // width: 100%;
   height: 39rem;
   background-color: $bgcGray;
   @media screen and (max-width: $tabletScreen) {
@@ -30,8 +30,6 @@
     left: 2.8rem;
     bottom: 0;
     z-index: 2;
-    @media screen and (max-width: $desctopScreen) {
-    }
     @media screen and (max-width: $tabletScreen) {
       bottom: -3.75rem;
       left: 50%;
