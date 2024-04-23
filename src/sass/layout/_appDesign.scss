@@ -1,0 +1,81 @@
+.app__design {
+  position: relative;
+  width: 100%;
+  padding: 11.25rem 0;
+  overflow: hidden;
+
+  @media screen and (max-width: $tabletScreen) {
+    height: 30rem;
+    padding: 3.75rem 0;
+  }
+}
+
+.blurb__copy {
+  font-weight: 700;
+  &--tight {
+    max-width: 18.75rem;
+  }
+  @media screen and (max-width: $tabletScreen) {
+    text-align: center;
+    margin: 0 auto 20px auto;
+  }
+}
+.app__design--content h2 {
+  font-size: 3rem;
+
+  @media screen and (max-width: $tabletScreen) {
+    text-align: center;
+    margin: 0 auto 20px auto;
+  }
+}
+.large,
+h2 {
+  font-size: 2.6rem;
+  line-height: 1.14;
+}
+
+.transform__link {
+  font-weight: 700;
+}
+.app__design--img {
+  position: absolute;
+  top: 2.1rem;
+  left: 45%;
+  width: 64.75rem;
+  height: 41.1rem;
+  margin: 0;
+  background-image: url(/src/images/phone.png);
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  @media screen and (max-width: $desctopScreen) {
+    width: 57.6rem;
+  }
+  @media screen and (max-width: $tabletScreen) {
+    width: 42.4rem;
+    top: auto;
+    left: 50%;
+    bottom: -13.9rem;
+    height: 27.43rem;
+    transform: translateX(-50%);
+
+    /*--webkit--*/
+    -webkit-transform: translateX(-50%);
+    /*--< /webkit >--*/
+  }
+}
+.phone__link {
+  color: $orange;
+  &:hover,
+  &:focus {
+    color: $orangeHover;
+  }
+  &::after {
+    width: 7%;
+    background-color: $orangeHover;
+  }
+  @media screen and (max-width: $tabletScreen) {
+    text-align: center;
+    padding: 0;
+  }
+}
