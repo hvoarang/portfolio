@@ -1,6 +1,7 @@
 .web__design {
   position: relative;
-  width: 100%;
+  min-width: 100%;
+  background-color: $bgcGray;
   padding: 200px 0;
   overflow: hidden;
   &--wrapper {
