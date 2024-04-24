@@ -1,0 +1,150 @@
+.web__design {
+  position: relative;
+  width: 100%;
+  padding: 200px 0;
+  overflow: hidden;
+  &--wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+    /*--webkit--*/
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    /*--< /webkit >--*/
+  }
+  &--img {
+    position: absolute;
+    top: 50%;
+    right: 42%;
+    -webkit-transform: translateY(-45%);
+    transform: translateY(-45%);
+    width: 628px;
+    height: 581px;
+    margin: 0;
+    background-image: url("/src/images/laptop.png");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+}
+.web__link {
+  color: $orange;
+  &:hover,
+  &:focus {
+    color: $orangeHover;
+  }
+  &::after {
+    width: 27.5%;
+    background-color: $orangeHover;
+  }
+}
+.web--framed {
+  padding: 15px 0;
+  background-color: #fafafa;
+}
+
+.web__heading {
+  margin: 0 0 15px 0;
+  color: $mainColor;
+  font-size: 58px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.web__copy {
+  font-weight: 700;
+}
+
+.web__copy--tight {
+  max-width: 300px;
+}
+@media screen and (max-width: $desctopScreen) {
+  .web__design--content h2 {
+    font-size: 48px;
+    text-align: right;
+  }
+
+  .web__design--img {
+    right: 28%;
+    width: 541px;
+    height: 520px;
+  }
+  .web__heading {
+    text-align: right;
+  }
+  .web__copy {
+    text-align: right;
+  }
+  .web__link {
+    text-align: right;
+    &::after {
+      width: 27.5%;
+      background-color: $orangeHover;
+      margin-left: 217px;
+    }
+  }
+}
+
+@media screen and (max-width: $tabletScreen) {
+  .web__design {
+    height: 690px;
+    padding: 60px 0;
+
+    &--wrapper {
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+    }
+    &--content {
+      text-align: center;
+    }
+    &--content h2 {
+      font-size: 32px;
+    }
+    &--content h2 br {
+      display: none;
+    }
+    &--img {
+      top: auto;
+      right: auto;
+      left: 50%;
+      bottom: -20px;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      width: 450px;
+      height: 476px;
+    }
+  }
+  .web__heading {
+    text-align: center;
+  }
+  .web__copy {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .web__link {
+    padding: 0;
+    text-align: center;
+    &::after {
+      width: 27.5%;
+      background-color: $orangeHover;
+      margin-left: 110px;
+    }
+  }
+}
+
+@media screen and (max-width: $mobileScreen) {
+  .web__design {
+    height: 625px;
+    &--img {
+      top: 150px;
+      width: 392px;
+      height: 650px;
+    }
+  }
+}

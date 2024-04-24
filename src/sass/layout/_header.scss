@@ -62,27 +62,27 @@
   padding: 2rem 0 2rem 0;
   position: relative;
   color: $secondaryColor;
-}
-.nav__link:hover,
-.nav__link:focus,
-.nav__link--active {
-  color: $mainColor;
-}
-.nav__link::after {
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background-color: $mainColor;
-  transform: scaleX(0);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.nav__link:hover::after,
-.nav__link:focus::after,
-.nav__link--active::after {
-  transform: scaleX(1);
+  &:hover,
+  &:focus,
+  &--active {
+    color: $mainColor;
+  }
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $mainColor;
+    transform: scaleX(0);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &:hover::after,
+  &k:focus::after,
+  &--active::after {
+    transform: scaleX(1);
+  }
 }
 .socials__icon {
   fill: $blueHover;
