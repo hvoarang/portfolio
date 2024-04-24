@@ -39,7 +39,7 @@
     color: $orangeHover;
   }
   &::after {
-    width: 27.5%;
+    width: 38.5%;
     background-color: $orangeHover;
   }
 }
@@ -58,11 +58,11 @@
 
 .web__copy {
   font-weight: 700;
+  &--tight {
+    max-width: 300px;
+  }
 }
 
-.web__copy--tight {
-  max-width: 300px;
-}
 @media screen and (max-width: $desctopScreen) {
   .web__design--content h2 {
     font-size: 48px;
@@ -83,9 +83,8 @@
   .web__link {
     text-align: right;
     &::after {
-      width: 27.5%;
-      background-color: $orangeHover;
-      margin-left: 217px;
+      width: 40%;
+      margin-left: 123px;
     }
   }
 }
@@ -132,9 +131,8 @@
     padding: 0;
     text-align: center;
     &::after {
-      width: 27.5%;
-      background-color: $orangeHover;
-      margin-left: 110px;
+      width: 42%;
+      margin-left: 62px;
     }
   }
 }
