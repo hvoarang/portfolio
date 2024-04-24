@@ -31,6 +31,10 @@
     background-size: 100%;
     background-repeat: no-repeat;
   }
+  @media screen and (max-width: $desctopScreen) {
+  }
+  @media screen and (max-width: $tabletScreen) {
+  }
 }
 .web__link {
   color: $orange;
@@ -131,8 +135,9 @@
     padding: 0;
     text-align: center;
     &::after {
-      width: 42%;
-      margin-left: 62px;
+      text-align: center;
+      margin-left: 10.9rem;
+      min-width: 19%;
     }
   }
 }
