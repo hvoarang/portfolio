@@ -139,6 +139,10 @@
       margin-left: 10.9rem;
       min-width: 19%;
     }
+    &--project::after {
+      color: blue;
+      min-width: 1%;
+    }
   }
 }
 
