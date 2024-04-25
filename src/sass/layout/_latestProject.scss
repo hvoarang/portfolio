@@ -181,11 +181,8 @@
 
   .work__visual {
     width: 600px;
-    max-width: 75%;
+    max-width: 100%;
   }
-}
-
-@media (max-width: $desctopScreen) {
   .pj__link::after {
     width: 100%;
     width: 105px;
@@ -193,6 +190,7 @@
     background-color: $orangeHover;
   }
 }
+
 @media (max-width: $tabletScreen) {
   .work__heading {
     font-size: 32px;
@@ -203,6 +201,9 @@
   .work__content-blurb h3 {
     font-size: 30px;
   }
+  .work__visual {
+    box-shadow: 1px 1px 15px 1px rgba(0, 0, 0, 0.21);
+  }
 }
 
 @media (max-width: $mobileScreen) {
@@ -210,9 +211,9 @@
     display: none;
   }
 
-  .work__visual {
-    max-width: 100%;
-  }
+  // .work__visual {
+  //   max-width: 75%;
+  // }
 }
 .pj__link {
   display: block;
