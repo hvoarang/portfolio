@@ -192,3 +192,12 @@ link {
 .mobile__contacts {
   margin-bottom: 64px;
 }
+.blog__btn {
+  margin: 0 auto;
+  &::after {
+    background-color: $bgcGray;
+  }
+  &::before {
+    background-color: $bgcGray;
+  }
+}
