@@ -49,7 +49,7 @@
   }
 }
 
-.contact__img img {
+.contact__img iframe {
   display: block;
   width: 100%;
 }
@@ -135,7 +135,7 @@
     bottom: 45px;
   }
 
-  .contact__visual {
+  .contact__img {
     /*--webkit--*/
     -webkit-box-ordinal-group: 3;
     -webkit-order: 2;
@@ -162,7 +162,7 @@
     margin-left: auto;
   }
 
-  .contact__visual {
+  .contact__img {
     max-width: 100%;
   }
 
@@ -186,7 +186,7 @@
     margin-left: auto;
   }
 
-  .contact__visual {
+  .contact__img {
     max-width: 100%;
   }
 
