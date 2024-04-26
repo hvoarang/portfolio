@@ -101,21 +101,13 @@
       }
     }
   }
-  &__img {
-    opacity: 0;
-    transform: translateX(-100px);
-    transition:
-      opacity 3s ease,
-      transform 1s ease-in;
-    transform: translateX(-50%);
-  }
 }
 .persona__content-blurb {
   opacity: 0;
   transform: translateX(200px);
   transition:
-    opacity 3s ease-in,
-    transform 3s ease-in;
+    opacity 1s ease-in,
+    transform 2s ease;
 }
 .persona__img.active {
   opacity: 1;

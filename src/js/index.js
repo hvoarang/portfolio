@@ -11,7 +11,6 @@ window.onload = function () {
 
 // ============== Persona ============
 window.addEventListener('scroll', function () {
-  const img = document.querySelector('.persona__img');
   const positionFromTop = img.getBoundingClientRect().top;
   const screenHeight = window.innerHeight;
 
