@@ -21,6 +21,17 @@
     margin: 0 auto 0.625rem auto;
   }
 }
+.app__design--content {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s ease;
+}
+.app__design--content.active {
+  opacity: 1;
+  transform: translateX(0); /* Конечное состояние: возврат на место */
+}
 .app__design--content h2 {
   font-size: 3rem;
   @media screen and (max-width: $tabletScreen) {
@@ -40,6 +51,12 @@
   background-size: 100%;
   background-repeat: no-repeat;
   box-shadow: none;
+
+  opacity: 0;
+  transform: translateX(100px);
+  transition:
+    opacity 3s ease,
+    transform 3s ease;
   @media screen and (max-width: $desctopScreen) {
     transform: rotate(3rad);
     rotate: x 180deg;
@@ -60,6 +77,10 @@
     -webkit-transform: translateX(-50%);
     /*--< /webkit >--*/
   }
+}
+.app__design--img.active {
+  opacity: 1;
+  transform: translateX(0);
 }
 .phone__link {
   color: $orange;

@@ -101,8 +101,29 @@
       }
     }
   }
+  &__img {
+    opacity: 0;
+    transform: translateY(20px); /* Начальное состояние: сдвинуто вниз */
+    transition:
+      opacity 0.5s ease,
+      transform 0.5s ease;
+  }
 }
-
+.persona__content-blurb {
+  opacity: 0;
+  transform: translateX(200px);
+  transition:
+    opacity 2s ease-in,
+    transform 2s ease-in-out;
+}
+.persona__img.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.persona__content-blurb.active {
+  opacity: 1;
+  transform: translateX(0);
+}
 .wrapper--small {
   width: 61.25rem;
 }

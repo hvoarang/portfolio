@@ -24,7 +24,14 @@
   width: 33.33%;
   margin-right: 1.875rem;
 }
-
+.blog__post,
+.blog__view-more {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition:
+    opacity 1s ease-in,
+    transform 2s ease-in;
+}
 .blog__post:last-child {
   margin-right: 0;
 }

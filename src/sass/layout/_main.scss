@@ -33,6 +33,7 @@
     color: $secondaryColor;
     font-size: 0.87rem;
     font-weight: 800;
+
     &-el {
       display: block;
       &--name {
@@ -42,6 +43,16 @@
 
         transform: translateX(-1.875rem);
         opacity: 0;
+
+        animation: 5s show ease;
+        @keyframes show {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
+        }
       }
       &--description {
         /*--webkit--*/
@@ -64,7 +75,10 @@
         transform: translateX(1.875rem);
         text-align: right;
         opacity: 0;
+
+        animation: 5s show ease;
       }
     }
   }
+  /* Начальное состояние для пунктов меню */
 }
