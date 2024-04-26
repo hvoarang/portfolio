@@ -103,22 +103,26 @@
   }
   &__img {
     opacity: 0;
-    transform: translateY(20px); /* Начальное состояние: сдвинуто вниз */
+    transform: translateX(-100px);
     transition:
-      opacity 0.5s ease,
-      transform 0.5s ease;
+      opacity 3s ease,
+      transform 1s ease-in;
+    transform: translateX(-50%);
   }
 }
 .persona__content-blurb {
   opacity: 0;
   transform: translateX(200px);
   transition:
-    opacity 2s ease-in,
-    transform 2s ease-in-out;
+    opacity 3s ease-in,
+    transform 3s ease-in;
 }
 .persona__img.active {
   opacity: 1;
   transform: translateY(0);
+  @media screen and (max-width: $tabletScreen) {
+    transform: translateX(-50%);
+  }
 }
 .persona__content-blurb.active {
   opacity: 1;

@@ -56,10 +56,8 @@
   transform: translateX(100px);
   transition:
     opacity 3s ease,
-    transform 3s ease;
+    transform 1s ease;
   @media screen and (max-width: $desctopScreen) {
-    transform: rotate(3rad);
-    rotate: x 180deg;
     top: 1rem;
     width: 35rem;
     left: 25%;
@@ -81,6 +79,14 @@
 .app__design--img.active {
   opacity: 1;
   transform: translateX(0);
+  @media screen and (max-width: $desctopScreen) {
+    transform: translateX(0);
+    transform: rotate(3rad);
+    rotate: x 180deg;
+  }
+  @media screen and (max-width: $tabletScreen) {
+    transform: translateX(-50%);
+  }
 }
 .phone__link {
   color: $orange;
