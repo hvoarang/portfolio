@@ -1,6 +1,6 @@
 .blog {
   position: relative;
-  padding: 60px 0;
+  padding: 3.75rem 0;
   min-width: 100%;
   background-color: $bgcGray;
   overflow: hidden;
@@ -20,18 +20,9 @@
   display: flex;
   justify-content: space-between;
 }
-// .blog__wrapper img {
-//   box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.21);
-//   &:hover,
-//   &:focus {
-//     box-shadow: none;
-//     transition: 0.3s linear;
-//     transform: scale(1.01);
-//   }
-// }
 .blog__post {
   width: 33.33%;
-  margin-right: 30px;
+  margin-right: 1.875rem;
 }
 
 .blog__post:last-child {
@@ -52,29 +43,29 @@
 .blog__post-thumbnail img {
   display: block;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .blog__post-excerpt h3 {
   color: $mainColor;
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 .blog__post-excerpt p {
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 .blog__view-more {
-  margin-top: 90px;
+  margin-top: 5.625rem;
   text-align: center;
 }
 
 .blog__view-more--el {
-  padding: 8px 30px;
+  padding: 0.5rem 1.875rem;
 }
 
 @media (max-width: $desctopScreen) {
   .blog__heading {
-    font-size: 48px;
+    font-size: 3rem;
   }
 
   .blog__wrapper {
@@ -94,9 +85,9 @@
   }
 
   .blog__post {
-    width: 450px;
+    width: 28.125rem;
     max-width: 100%;
-    margin: 0 0 45px 0;
+    margin: 0 0 2.813rem 0;
   }
 
   .blog__post:last-child {
@@ -112,9 +103,9 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: $tabletScreen) {
   .blog__heading {
-    font-size: 32px;
+    font-size: 1.625rem;
   }
 }
 .blog__link {
@@ -136,7 +127,7 @@
     position: absolute;
     left: 0;
     width: 100%;
-    width: 105px;
+    width: 6.563rem;
     height: 1px;
     background-color: $orangeHover;
     transform: scaleX(0);
@@ -150,7 +141,7 @@
   @media (max-width: $desctopScreen) {
     &::after {
       min-width: 10%;
-      margin-left: 112px;
+      margin-left: 7rem;
     }
   }
 }

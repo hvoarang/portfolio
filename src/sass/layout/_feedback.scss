@@ -1,6 +1,6 @@
 .contact {
   position: relative;
-  padding: 60px 0;
+  padding: 3.75rem 0;
   background-color: $whiteColor;
 }
 
@@ -9,7 +9,6 @@
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
@@ -21,18 +20,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 60px 0;
+  padding: 3.75rem 0;
 }
 
 .contact__wrapper::before {
   content: "";
   position: absolute;
   top: 0;
-  left: 75px;
-  right: 75px;
+  left: 4.68rem;
+  right: 4.68rem;
   bottom: 0;
-  border: 10px solid $border;
-  border-radius: 24px 86px 86px 24px;
+  border: 0.625rem solid $border;
+  border-radius: 1.5rem 5.375rem 5.375rem 1.5rem;
 }
 
 .contact__img {
@@ -72,7 +71,7 @@
   width: 47.5%;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 15px 0;
+  padding: 0.938rem 0;
   background-color: $whiteColor;
   z-index: 1;
 
@@ -82,36 +81,35 @@
 }
 
 .contact__form-el {
-  padding: 0 0 0 15px;
-  font-size: 16px;
+  padding: 0 0 0 0.938rem;
+  font-size: 1rem;
   font-weight: 700;
   background-color: transparent;
   border: 1px solid $secondaryColor;
-  border-radius: 3px;
+  border-radius: 0.188rem;
 }
 
 .contact__form-el--name,
 .contact__form-el--email {
   width: 45%;
-  height: 50px;
+  height: 3.125rem;
 }
 
 .contact__form-el--message {
   width: 100%;
-  height: 150px;
-  margin: 20px 0 30px 0;
-  padding-top: 15px;
+  height: 9.375rem;
+  margin: 1.25rem 0 1.875rem 0;
+  padding-top: 0.938rem;
   resize: none;
 }
 
 .contact__form input[type="submit"] {
   margin-left: auto;
-  padding: 10px 50px;
+  padding: 0.625rem 3.125rem;
 }
-
 @media (max-width: $desctopScreen) {
   .contact__heading {
-    font-size: 48px;
+    font-size: 3rem;
   }
   .contact__form input[type="submit"] {
     margin: 0 auto;
@@ -129,10 +127,10 @@
   }
 
   .contact__wrapper::before {
-    top: 45px;
+    top: 2.813rem;
     left: 0;
     right: 0;
-    bottom: 45px;
+    bottom: 2.813rem;
   }
 
   .contact__img {
@@ -147,10 +145,10 @@
   }
 
   .contact__form {
-    width: 600px;
+    width: 37.5rem;
     max-width: 75%;
-    margin-bottom: 45px;
-    padding: 0 15px;
+    margin-bottom: 2.813rem;
+    padding: 0 0.938rem;
   }
 }
 
@@ -173,11 +171,11 @@
 
   .contact__form-el--name,
   .contact__form-el--email {
-    height: 40px;
+    height: 2.5rem;
   }
 
   .contact__form-el--message {
-    height: 90px;
+    height: 5.625rem;
   }
 }
 
@@ -197,10 +195,10 @@
 
   .contact__form-el--name,
   .contact__form-el--email {
-    height: 40px;
+    height: 2.5rem;
   }
 
   .contact__form-el--message {
-    height: 90px;
+    height: 5.625;
   }
 }

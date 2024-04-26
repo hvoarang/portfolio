@@ -3,7 +3,7 @@
   min-width: 100%;
   background-color: $bgcGray;
   overflow: hidden;
-  padding: 200px 0;
+  padding: 12.5rem 0;
   &--wrapper {
     display: -webkit-box;
     display: -webkit-flex;
@@ -23,8 +23,8 @@
     right: 42%;
     -webkit-transform: translateY(-45%);
     transform: translateY(-45%);
-    width: 628px;
-    height: 581px;
+    width: 39.25rem;
+    height: 36.313rem;
     margin: 0;
     background-image: url("/src/images/laptop.png");
     background-position: center;
@@ -44,14 +44,14 @@
   }
 }
 .web--framed {
-  padding: 15px 0;
+  padding: 0.938rem 0;
   background-color: $bgcGray;
 }
 
 .web__heading {
-  margin: 0 0 15px 0;
+  margin: 0 0 0.938rem 0;
   color: $mainColor;
-  font-size: 58px;
+  font-size: 3.625rem;
   font-weight: 800;
   line-height: 1;
 }
@@ -59,20 +59,20 @@
 .web__copy {
   font-weight: 700;
   &--tight {
-    max-width: 300px;
+    max-width: 18.75rem;
   }
 }
 
 @media screen and (max-width: $desctopScreen) {
   .web__design--content h2 {
-    font-size: 48px;
+    font-size: 3rem;
     text-align: right;
   }
 
   .web__design--img {
     right: 28%;
-    width: 541px;
-    height: 520px;
+    width: 33.813rem;
+    height: 32.5rem;
   }
   .web__heading {
     text-align: right;
@@ -84,15 +84,15 @@
     text-align: right;
     &::after {
       width: 40%;
-      margin-left: 123px;
+      margin-left: 7.688rem;
     }
   }
 }
 
 @media screen and (max-width: $tabletScreen) {
   .web__design {
-    height: 690px;
-    padding: 60px 0;
+    height: 43.125rem;
+    padding: 3.75rem 0;
 
     &--wrapper {
       -webkit-box-pack: center;
@@ -104,7 +104,7 @@
       text-align: center;
     }
     &--content h2 {
-      font-size: 32px;
+      font-size: 2rem;
     }
     &--content h2 br {
       display: none;
@@ -113,11 +113,11 @@
       top: auto;
       right: auto;
       left: 50%;
-      bottom: -20px;
+      bottom: -1.25rem;
       -webkit-transform: translateX(-50%);
       transform: translateX(-50%);
-      width: 450px;
-      height: 476px;
+      width: 28.125rem;
+      height: 29.75rem;
     }
   }
   .web__heading {
@@ -125,7 +125,7 @@
   }
   .web__copy {
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
   }
   .web__link {
     padding: 0;
@@ -135,20 +135,16 @@
       margin-left: 10.9rem;
       min-width: 19%;
     }
-    &--project::after {
-      color: blue;
-      min-width: 1%;
-    }
   }
 }
 
 @media screen and (max-width: $mobileScreen) {
   .web__design {
-    height: 625px;
+    height: 39.063rem;
     &--img {
-      top: 150px;
-      width: 392px;
-      height: 650px;
+      top: 9.375rem;
+      width: 24.5rem;
+      height: 40.625rem;
     }
   }
 }

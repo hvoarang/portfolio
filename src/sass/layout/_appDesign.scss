@@ -18,14 +18,14 @@
   }
   @media screen and (max-width: $tabletScreen) {
     text-align: center;
-    margin: 0 auto 10px auto;
+    margin: 0 auto 0.625rem auto;
   }
 }
 .app__design--content h2 {
   font-size: 3rem;
   @media screen and (max-width: $tabletScreen) {
     text-align: center;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 1.25rem auto;
   }
 }
 .app__design--img {
