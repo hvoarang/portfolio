@@ -258,12 +258,14 @@ link {
 .example-2 .icon-content a:hover {
   color: $whiteColor;
 }
+.example-2 .arr-up a:hover {
+  color: $orangeHover;
+}
 .example-2 .arr-up a {
   background-color: $bgcGray;
   color: $orangeHover;
 }
 .example-2 .arr-up a:hover {
-  scale: 1.1;
 }
 .example-2 .icon-content a .filled {
   position: absolute;
@@ -298,5 +300,5 @@ link {
   background-color: #ff0000;
 }
 .example-2 .icon-content a[data-social="arr-up"] .filled {
-  background: linear-gradient(10deg, #24262a, #e1306c, #c135b4, #405de6, #24262a);
+  background: linear-gradient(10deg, #24262a, $bgcGray);
 }
