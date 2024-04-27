@@ -96,4 +96,33 @@ window.addEventListener('scroll', function () {
   }
 });
 
-// ============== End BLOG ============
+// ============== End BLOG ============|
+
+// ============== onScroll =============
+
+const h1 = document.querySelector('div'),
+  banner = document.querySelector('container'),
+  button = document.querySelector('button');
+
+const onScroll = ({ target }) => {
+  const scrollPosition = target.scrollingElement.scrollTop;
+};
+
+if (scrollPosition > 150) {
+  banner.style.backgroundSize = '150%';
+  h1.style.opasity = 0;
+  h1.style.translate = '0 -50px';
+  h1.style.scale = '0.9';
+  button.stile.opacity = 0;
+  button.stile.translate = '0 -50px';
+  button.style.scale = '0.8';
+} else {
+  banner.stile.backgroundSize = '180%';
+  h1.style.opacity = 1;
+  h1.style.translate = 0;
+  h1.style.scale = 1;
+  button.style.opacity = 1;
+  button.style.translate = 0;
+  button.style.scale = 1;
+}
+// ============== EndScroll ============
