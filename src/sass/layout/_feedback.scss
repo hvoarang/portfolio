@@ -1,7 +1,5 @@
 .contact {
-  position: relative;
-  padding: 3.75rem 0;
-  background-color: $whiteColor;
+  padding: 50px 0px 50px;
 }
 
 .contact__wrapper {
@@ -106,6 +104,9 @@
 .contact__form input[type="submit"] {
   margin-left: auto;
   padding: 0.625rem 3.125rem;
+}
+.contact__heading {
+  margin-bottom: 30px;
 }
 @media (max-width: $desctopScreen) {
   .contact__heading {
