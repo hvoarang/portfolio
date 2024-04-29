@@ -90,12 +90,14 @@
 }
 .phone__link {
   color: $orange;
+  width: 100px;
   &:hover,
   &:focus {
     color: $orangeHover;
   }
   &::after {
-    width: 7.5%;
+    text-align: center;
+    width: 80%;
     background-color: $orangeHover;
   }
   @media screen and (max-width: $desctopScreen) {
@@ -104,13 +106,14 @@
     }
   }
   @media screen and (max-width: $tabletScreen) {
+    margin: 0 auto;
+    width: 100px;
     text-align: center;
     padding: 0;
 
     &::after {
+      width: 80%;
       text-align: center;
-      margin-left: 10.9rem;
-      min-width: 19%;
     }
   }
 }
