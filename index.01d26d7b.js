@@ -1,2 +1,0 @@
-const e=document.querySelectorAll(".work__list-el"),t=document.querySelectorAll(".work__navigation-el");let i=0;function l(l){e.forEach((e,t)=>{t===l?e.classList.add("work__list-el--is-active"):e.classList.remove("work__list-el--is-active")}),t.forEach((e,t)=>{t===l?e.classList.add("work__navigation-el--is-active"):e.classList.remove("work__navigation-el--is-active")}),i=l}t.forEach((e,t)=>{e.addEventListener("click",()=>{l(t)})}),setInterval(function(){l(i=(i+1)%e.length)},5e3);
-//# sourceMappingURL=index.01d26d7b.js.map
