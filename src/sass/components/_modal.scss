@@ -1,31 +1,3 @@
-// Mobile Menu Styles
-.menu-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 48px 40px;
-  background: $whiteColor;
-  box-shadow:
-    0px 4px 8px rgba(0, 0, 0, 0.04),
-    0px 2px 4px rgba(0, 0, 0, 0.08),
-    0px 1px 3px rgba(0, 0, 0, 0.16);
-  transform: translateX(100%);
-  transition: transform 400ms;
-  z-index: 1001;
-  overflow: hidden;
-  &.is-open {
-    transform: translateX(0);
-  }
-}
-.menu-toggle {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-}
 .backdrop {
   position: fixed;
   top: 0;
@@ -81,12 +53,12 @@
   height: 30px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  fill: $blackColor;
+  fill: $orangeHover;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal__close:hover .modal__close--icon,
 .modal__close:focus .modal__close--icon {
-  fill: $blueHover;
+  fill: $orangeHover;
 }
 .modal__form--title {
   display: block;
@@ -96,7 +68,7 @@
   letter-spacing: 0.03em;
   text-align: center;
   margin-bottom: 12px;
-  color: $blackColor;
+  color: $mainColor;
   @media screen and (min-width: $desctopScreen) {
     line-height: 1.15;
   }
@@ -131,20 +103,20 @@
   }
   &:hover,
   &:focus {
-    border: 1px solid $blueHover;
+    border: 1px solid $orangeHover;
   }
 }
 .form__input--icon {
   position: absolute;
   left: 12px;
   bottom: 11px;
-  fill: $blackColor;
+  fill: $secondaryColor;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal__form--input:hover + .form__input--icon,
 .modal__form--input:focus + .form__input--icon {
-  fill: $blueHover;
+  fill: $link;
 }
 .form__input--comment {
   height: 120px;
@@ -157,7 +129,7 @@
   &:hover,
   &:focus,
   &:checked {
-    border: 1px solid $blueHover;
+    border: 1px solid $orangeHover;
   }
 }
 .form__input--comment::placeholder {
@@ -190,18 +162,18 @@
   height: 15px;
   margin-right: 7px;
   background-color: transparent;
-  border: 1px solid $secondaryColor;
+  border: 1px solid $orangeHover;
   border-radius: 3px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form__input--agree:checked + .label__agree--icon {
   border: none;
-  background-color: $blueHover;
+  background-color: $orangeHover;
 }
 .label__agree--accent {
   margin-left: 4px;
   text-decoration: underline;
-  color: $blueHover;
+  color: $orangeHover;
 }
 .modal__form--btn {
   display: block;
@@ -259,4 +231,7 @@
 }
 .subscribe__btn--icon {
   margin-left: 10px;
+}
+.backdrop {
+  z-index: 104;
 }

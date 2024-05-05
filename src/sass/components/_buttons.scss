@@ -170,28 +170,7 @@ link {
     opacity: 1;
   }
 }
-.mobile__nav {
-  margin-bottom: auto;
-  & li {
-    margin-bottom: 32px;
-    -webkit-animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  }
-  & a {
-    font-weight: 500;
-    font-size: 40px;
-    line-height: 1.17;
-    letter-spacing: 0.02em;
-    margin-bottom: 32px;
-    color: $secondaryColor;
-    &:active {
-      color: $accentColorHover;
-    }
-  }
-}
-.mobile__contacts {
-  margin-bottom: 64px;
-}
+
 .blog__btn {
   margin: 0 auto;
   &::after {
