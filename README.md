@@ -1,1 +1,1 @@
-Info фыв
+Info
