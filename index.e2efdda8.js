@@ -1,0 +1,2 @@
+console.log(Number.isNaN(Number("51"))),console.log(Number.isNaN(Number("qweqwe"))),console.log(.17+.24),console.log((.17+.24).toFixed(2)),console.log(Math.floor(1.7)),console.log(Math.ceil(1.2)),console.log(Math.round(1.2)),console.log(Math.round(1.5)),console.log(50),console.log(10),console.log(16),console.log(Math.random()),console.log(9*Math.random()+1),console.log("Мангоестьсчастлив"),console.log("12"),console.log("124");
+//# sourceMappingURL=index.e2efdda8.js.map
