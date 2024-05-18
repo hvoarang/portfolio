@@ -1,41 +1,67 @@
-const validNumber = Number('51'); // 51
-console.log(Number.isNaN(validNumber)); // false
+const value = 5;
 
-const invalidNumber = Number('qweqwe'); // NaN
-console.log(Number.isNaN(invalidNumber)); // true
+if (true) {
+  console.log('Block scope: ', value); // 5
+}
 
-console.log(0.17 + 0.24); // 0.41000000000000003
-console.log((0.17 + 0.24).toFixed(2)); // 0.41
+console.log('Global scope: ', value); // 5
 
-// Math.floor(num) - повертає найменше ціле число,
-// менше, або яке дорівнює зазначеному числу
-console.log(Math.floor(1.7)); // 1
+//========================================
 
-// Math.ceil(num) - повертає найбільше ціле число,
-// більше, або яке дорівнює зазначеному числу.
-console.log(Math.ceil(1.2)); // 2
+if (true) {
+  const value = 5;
+  console.log('Block scope: ', value); // 5
+}
 
-// Math.round(num) - повертає значення числа,
-// округленого до найближчого цілого
-console.log(Math.round(1.2)); // 1
-console.log(Math.round(1.5)); // 2
+console.log('Global scope: ', value); // ReferenceError: value is not defined
 
-// Math.max(num1, num2, ...) - повертає найбільше ціле число з набору
-console.log(Math.max(20, 10, 50, 40)); // 50
+//========================================
+const global = 'global';
 
-// Math.min(num1, num2, ...) - повертає найменше ціле число з набору
-console.log(Math.min(20, 10, 50, 40)); // 10
+if (true) {
+  const blockA = 'block A';
 
-// Math.pow(base, exponent) - піднесення до степеня
-console.log(Math.pow(2, 4)); // 16
+  // Бачимо глобальну + локальну A
+  console.log(global); // 'global'
+  console.log(blockA); // block A
 
-// Math.random() - повертає псевдовипадкове число в діапазоні [0, 1)
-console.log(Math.random()); // випадкове число між 0 і 1
-console.log(Math.random() * (10 - 1) + 1); // псевдовипадкове число від 1 до 10
+  // Змінні blockB і blockC не знайдені в доступних областях видимості.
+  // Буде помилка звернення до змінної.
+  console.log(blockB); // ReferenceError: blockB is not defined
+  console.log(blockC); // ReferenceError: blockC is not defined
 
-//Конкатенация строк
-const message = 'Манго' + 'есть' + 'счастлив';
-console.log(message); // Манго счастлив
+  if (true) {
+    const blockB = 'block B';
 
-console.log(1 + '2'); // консоль «12»
-console.log(1 + '2' + 4); // Консоль «124» . журнал ( 1 + 2 + «4» ); // "34"
+    // Бачимо глобальну + зовнішню A + локальну B
+    console.log(global); // global
+    console.log(blockA); // block A
+    console.log(blockB); // block B
+
+    // Змінна blockC не знайдена в доступних областях видимості.
+    // Буде помилка звернення до змінної.
+    console.log(blockC); // ReferenceError: blockC is not defined
+  }
+}
+
+if (true) {
+  const blockC = 'block C';
+
+  // Бачимо глобальну + локальну C
+  console.log(global); // global
+  console.log(blockC); // block C
+
+  // Змінні blockA і blockB не знайдені в доступних областях видимості.
+  // Буде помилка звернення до змінної.
+  console.log(blockA); // ReferenceError: blockA is not defined
+  console.log(blockB); // ReferenceError: blockB is not defined
+}
+
+// Бачимо лише глобальну
+console.log(global); // global
+
+// Змінні blockA, blockB і blockC не знайдені в доступних областях видимості.
+// Буде помилка звернення до змінної.
+console.log(blockA); // ReferenceError: blockA is not defined
+console.log(blockB); // ReferenceError: blockB is not defined
+console.log(blockC); // ReferenceError: blockC is not defined
