@@ -1,0 +1,2 @@
+console.log("Block scope: ",5),console.log("Global scope: ",5),console.log("Block scope: ",5),console.log("Global scope: ",5);const o="global";{let l="block A";console.log(o),console.log(l),console.log(blockB),console.log(blockC),console.log(o),console.log(l),console.log("block B"),console.log(blockC)}console.log(o),console.log("block C"),console.log(blockA),console.log(blockB),console.log(o),console.log(blockA),console.log(blockB),console.log(blockC);
+//# sourceMappingURL=index.dcb9efc7.js.map
