@@ -53,7 +53,7 @@ if (true) {
 
   // Змінні blockA і blockB не знайдені в доступних областях видимості.
   // Буде помилка звернення до змінної.
-  console.log(blockA); // Error: blockA is not defined
+  console.log(blockA); // Error
   console.log(blockB); // Error: blockB is not defined
 }
 
