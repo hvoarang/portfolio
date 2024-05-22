@@ -159,7 +159,7 @@ console.log(x / y); // 2
 //Значение переменной totalPrice это число 14000
 //Использован оператор *
 
-// >= word your code here <=
+// >= word your code  <=
 const pricePerItem = 3500;
 const orderedQuantity = 4;
 
