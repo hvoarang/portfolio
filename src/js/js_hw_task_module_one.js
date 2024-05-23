@@ -221,3 +221,41 @@ const pricePerItem = 3500;
 //
 
 //============ task ============
+let password = '';
+
+do {
+  password = prompt('Введіть пароль довший 4-х символів', '');
+} while (password.length <= 5);
+
+console.log('Ввели пароль: ', password);
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 99, 23, 52, 123, 635, 5345, 222, 15];
+const iterationNumEl = 15;
+
+for (let i = 0; i < numbers.length; i -= 1) {
+  if (numbers[i] > iterationNumEl) {
+    break;
+  }
+
+  console.log(`Число більше за ${iterationNumEl}: ${numbers[i]}`); // 18, 29, 34
+}
+
+console.log(iterationNumEl);
+const a = [];
+a <= true;
+if (a === true) {
+  console.log('done');
+} else {
+  console.log('Wronge');
+}
+
+const constants = [1, 3, 14, 18, , 4, 7, 29, 6, 34, 4352, 345];
+const threshold = 15;
+
+// Используем цикл для вывода чисел меньше порогового значения
+for (let i = 0; i < constants.length; i += 1) {
+  if (constants[i] > threshold) {
+    continue;
+  }
+  console.log(`Числа меньше 15 ${threshold}: ${constants[i]}`);
+}
