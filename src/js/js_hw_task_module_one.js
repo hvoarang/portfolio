@@ -252,10 +252,25 @@ if (a === true) {
 const constants = [1, 3, 14, 18, , 4, 7, 29, 6, 34, 4352, 345];
 const threshold = 15;
 
-// Используем цикл для вывода чисел меньше порогового значения
 for (let i = 0; i < constants.length; i += 1) {
   if (constants[i] > threshold) {
-    continue;
+    console.log(` << ${threshold} : ${constants[i]}`);
   }
-  console.log(`Числа меньше 15 ${threshold}: ${constants[i]}`);
 }
+
+let bool = true ? true : false;
+console.log(bool);
+
+function fun() {
+  let num = 5;
+  if (num === '5') return true;
+  else return false;
+}
+fun();
+
+
+
+Конечно! Мы можем добавить ещё одну переменную, чтобы записать в неё все числа из массива arr, которые меньше 15. Вот как это можно сделать:
+
+javascript
+Копировать код
