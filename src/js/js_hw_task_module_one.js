@@ -274,3 +274,41 @@ fun();
 
 javascript
 Копировать код
+
+const arr = [1, 11, 111, 2, 22, 222, 3, 33, 333, 4, 44, 444, 5, 55, 555]
+let newArr = 30 
+let arrOver = []
+let arrLess = []
+
+
+function newwArr() {
+  for (let i = 0; i < arr.length; i++) {
+  if (arr[i] > newArr) {
+    arrOver.push(arr[i])
+    
+  } else if (arr[i] < newArr) {
+    arrLess.push(arr[i])
+
+  }
+}
+}
+newwArr(40)
+
+console.log(newwArr(arrOver - arrLess));
+
+const movies = [1,2,3,4,5,55,666,777,888,999]
+
+let mid = [15]
+let less = []
+let bigger = []
+
+for (let i = 0; i < movies.length; i++) {
+if (movies[i] < mid ) {
+ low.push(movies[i])
+ } else if (movies[i] > mid) {
+ hight.push(movies[i])
+ }
+}
+console.log(`bigger ${mid} : ${bigger}`)
+console.log(`less ${mid} : ${less}`)
+
