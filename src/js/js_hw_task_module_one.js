@@ -296,19 +296,19 @@ newwArr(40)
 
 console.log(newwArr(arrOver - arrLess));
 
-const movies = [1,2,3,4,5,55,666,777,888,999]
+const arrTop = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 22, 222, 33, 333, 44, 444, 55, 555, 66, 666, 777, 77]
 
-let mid = [15]
+let mid = [30]
+let hight = []
 let less = []
-let bigger = []
 
-for (let i = 0; i < movies.length; i++) {
-if (movies[i] < mid ) {
- low.push(movies[i])
- } else if (movies[i] > mid) {
- hight.push(movies[i])
- }
+for (i = 0; i < arrTop.length; i++) {
+  if (arrTop[i] < mid) {
+    less.push(arrTop[i])
+  } else if (arrTop[i] > mid) {
+    hight.push(arrTop[i])
+  }
 }
-console.log(`bigger ${mid} : ${bigger}`)
-console.log(`less ${mid} : ${less}`)
-
+console.log(`More  ${mid} : ${hight}`);
+console.log(`Less  ${mid} : ${less}`);
+console.log(`Less  ${mid} : ${less}`);
