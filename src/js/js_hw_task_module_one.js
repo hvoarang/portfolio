@@ -220,6 +220,5 @@ function multiply() {
 // 2. Виклики функції multiply
 multiply(); // 'Це лог на момент виклику функції multiply'
 multiply(); // 'Це лог на момент виклику функції multiply'
-multiply(); // 'Це лог на момент виклику функції multiply'
 
 
