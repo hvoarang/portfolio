@@ -756,5 +756,5 @@ function checkForName(fullName, name) {
 
 function checkForSpam(message) {
   let result;
-  
+  return
 }
