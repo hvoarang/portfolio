@@ -1033,3 +1033,33 @@ function checkForSpam(message) {
 checkForSpam('[SPAM] How to earn fast money?');
 checkForSpam('Get best sale offers now!');
 checkForSpam('Amazing SalE, only tonight!');
+
+//==============
+
+// Оголошення функції (function declaration)
+function multiply(x, y, z) {
+  console.log(`Результат множення дорівнює ${x * y * z}`);
+}
+
+// Функціональний вираз (function expression)
+const multiply = function (x, y, z) {
+  console.log(`Результат множення дорівнює ${x * y * z}`);
+};
+
+//==============
+
+function bar() {
+  console.log('bar.1');
+}
+
+function baz() {
+  console.log('baz.1');
+}
+
+function foo() {
+  console.log('foo.2');
+  bar(console.log('bar.2'));
+  baz(console.log('baz.2'));
+}
+
+foo(console.log('foo.1'));
