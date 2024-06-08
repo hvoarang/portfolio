@@ -651,3 +651,16 @@ function includes(array, value) {
 }
 
 //==============
+
+
+const bookShelf = {
+  book: ["first book", "two"],
+  title: "Kingdom",
+  score: 900,
+  genrie: "Horr",
+  
+}
+bookShelf.alertBook = function () {
+  console.log(`Books: ${this.book[1]}`)
+}
+bookShelf.alertBook()
