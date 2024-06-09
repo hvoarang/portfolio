@@ -663,4 +663,4 @@ const bookShelf = {
 bookShelf.alertBook = function () {
   console.log(`Books: ${this.book[1]}`)
 }
-bookShelf.alertBook()
+bookShelf.alertBook("hi")
