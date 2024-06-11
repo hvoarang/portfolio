@@ -664,3 +664,23 @@ bookShelf.alertBook = function () {
   console.log(`Books: ${this.book[1]}`)
 }
 bookShelf.alertBook()
+
+
+function fn(x, y) {
+  x = "hello"
+  y = "world"
+  console.log(x + y);
+  fn2()
+}
+
+function fn2() {
+    x = 5;
+  y = 5;
+  fn()
+  return
+}
+fn()
+
+git add .
+git commit -m "new fix"
+git push
