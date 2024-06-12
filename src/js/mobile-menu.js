@@ -27,3 +27,5 @@
     bodyScrollLock.enableBodyScroll(document.body);
   });
 })();
+
+console.log('asd:', asd);

@@ -1063,3 +1063,20 @@ function foo() {
 }
 
 foo(console.log('foo.1'));
+
+console.log(`${asd}:`, asd);
+
+console.log(`hasOwnProperty: ${hasOwnProperty}`);
+
+
+class  extends Warrior {
+constructor({ warcry, ...restProps } = {}) {
+super(restProps);
+
+this.warcry = warcry;
+}
+
+babyRage() {
+console.log(this.warcry);
+}
+}

@@ -1,18 +1,21 @@
-Метод Object.create(animal) создает и возвращает новый объект, связывая его с объектом animal. Поэтому можно получить значение свойства legs, обратившись к нему как dog.legs, хотя он отсутствует в объекте dog – это несобственное свойство из объекта animal.
+const books = [
+  {
+    title: 'The Last Kingdom',
+    author: 'Bernard Cornwell',
+    rating: 8.38,
+  },
+  {
+    title: 'На березі спокійних вод',
+    author: 'Роберт Шеклі',
+    rating: 8.51,
+  },
+];
 
-
-
-Оператор in, используемый в цикле for...in, не делает разницы между собственными и несобственными свойствами объекта.Эта особенность мешает, поскольку мы всегда хотим взять только собственные свойства.Для того, чтобы узнать, содержит ли объект собственное свойство, используется метод hasOwnProperty(key), возвращающий true или false.
-
-
-// ❌ Повертає true для всіх властивостей
-console.log("name" in dog); // true
-console.log("legs" in dog); // true
-
-// ✅ Повертає true тільки для власних властивостей
-console.log(dog.hasOwnProperty("name")); // true
-console.log(dog.hasOwnProperty("legs")); // false
-
-
-
-
+for (const book of books) {
+  console.log(book.title);
+  console.log(book.author);
+  console.log(book.rating);
+}
+git add .
+git commit -m "new fix"
+git push
