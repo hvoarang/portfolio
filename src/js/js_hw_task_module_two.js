@@ -20,8 +20,16 @@ git add .
 git commit -m "new fix"
 git push
 
-const box = {
-  [
-    
-  ],
+const boxs = {
+  figure: "circle",
+  color: 'red',
+  radius: 50,
+
+  getBox() {
+   return this.figure
+  },
+  addBox(squaere) {
+    this.boxes.push("squaere")
+  }
 }
+console.log("boxes:", boxs)
