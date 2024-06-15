@@ -21,6 +21,7 @@ git commit -m "new fix"
 git push
 
 const boxs = {
+  box: ['asd'],
   figure: "circle",
   color: 'red',
   radius: 50,
@@ -32,4 +33,6 @@ const boxs = {
     this.boxes.push("squaere")
   }
 }
-console.log("boxes:", boxs)
+boxs.getBox('squaere')
+boxs.addBox('sqre')
+boxs.addBox('sqre')
