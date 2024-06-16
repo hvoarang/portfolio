@@ -27,12 +27,12 @@ const boxs = {
   radius: 50,
 
   getBox() {
-   return this.figure
+   return this.box
   },
   addBox(squaere) {
-    this.boxes.push("squaere")
+    this.box.push("squaere")
   }
 }
-boxs.getBox('squaere')
-boxs.addBox('sqre')
-boxs.addBox('sqre')
+
+console.log(boxs.getBox('squaere'));
+console.log(boxs.addBox('sqre'));
