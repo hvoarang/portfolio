@@ -1145,5 +1145,6 @@ const atTheOldToad = {
     }
 
     this.potions.splice(potionIndex, 1, newName);
+  return
   },
 };
