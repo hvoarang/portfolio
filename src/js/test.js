@@ -1,87 +1,43 @@
-const value = 5;
+const atTheOldToad = {
+  potions: [
+    { name: 'Speed potion', price: 460 },
+    { name: 'Dragon breath', price: 780 },
+    { name: 'Stone skin', price: 520 },
+  ],
 
-if (true) {
-  console.log('Block scope: ', value); // 5
-}
+  getPotions() {
+    return this.potions;
+  },
+  addPotion(newPotion) {
+    for (const item of this.potions) {
+      if (item.name === newPotion.name) {
+        return `Error! Potion ${newPotion.name} is already in your inventory!`;
+      }
+    }
+    const newProduct = {
+      ...newPotion,
+    };
 
-console.log('Global scope: ', value); // 5
+    this.potions.push(newPotion);
+  },
+  removePotion(potionName) {
+    for (let i = 0; i < this.potions.length; i += 1) {
+      const potion = this.potions[i];
+      if (potionName === potion.name) {
+        this.potions.splice(i, 1);
+      }
+    }
+  },
+  updatePotionName(oldName, newName) {
+    let resalt = `Potion ${oldName} is not in inventory`;
+    for (let i = 0; i < this.potions.length; i += 1) {
+      const potion = this.potions[i];
 
-//========================================
-
-if (true) {
-  const value = 5;
-  console.log('Block scope: ', value); // 5
-}
-
-console.log('Global scope: ', value); // ReferenceError: value is not defined
-
-//========================================
-const global = 'global';
-
-if (true) {
-  const blockA = 'block A';
-
-  // Бачимо глобальну + локальну A
-  console.log(global); // 'global'
-  console.log(blockA); // block A
-
-  // Змінні blockB і blockC не знайдені в доступних областях видимості.
-  // Буде помилка звернення до змінної.
-  console.log(blockB); // ReferenceError: blockB is not defined
-  console.log(blockC); // ReferenceError: blockC is not defined
-
-  if (true) {
-    const blockB = 'block B';
-
-    // Бачимо глобальну + зовнішню A + локальну B
-    console.log(global); // global
-    console.log(blockA); // block A
-    console.log(blockB); // block B
-
-    // Змінна blockC не знайдена в доступних областях видимості.
-    // Буде помилка звернення до змінної.
-    console.log(blockC); // ReferenceError: blockC is not defined
-  }
-}
-
-if (true) {
-  const blockC = 'block C';
-
-  // Бачимо глобальну + локальну C
-  console.log(global); // global
-  console.log(blockC); // block C
-
-  // Змінні blockA і blockB не знайдені в доступних областях видимості.
-  // Буде помилка звернення до змінної.
-  console.log(blockA); // Error
-  console.log(blockB); // Error: blockB is not defined
-}
-
-// Бачимо лише глобальну
-console.log(global); // global
-
-// Змінні blockA, blockB і blockC не знайдені в доступних областях видимості.
-// Буде помилка звернення до змінної.
-console.log(blockA); // ReferenceError: blockA is not defined
-console.log(blockB); // ReferenceError: blockB is not defined
-console.log(blockC); // ReferenceError: blockC is not defined
-
-let namea = 'pashaaaaa';
-console.log(namea.slice(0, 2));
-
-let password = '';
-
-do {
-  password = prompt('Введіть пароль довший 4-х символів', '');
-} while (password.length < 5);
-
-console.log('Ввели пароль: ', password);
-
-const target = 3;
-let sum = 0;
-
-for (let i = 0; i <= target; i += 1) {
-  sum += i;
-}
-
-console.log(sum);
+      if (oldName === potion.name) {
+        potion.name = newName;
+        resalt = `Found ${oldName} change to ${newName}`;
+      }
+    }
+    return console.log(resalt);
+  },
+};

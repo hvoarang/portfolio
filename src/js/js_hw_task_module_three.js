@@ -1148,3 +1148,128 @@ const atTheOldToad = {
   return
   },
 };
+
+const apartment = {
+  descr: 'Spacious apartment in the city center',
+  rating: 4,
+  price: 2153,
+};
+const values = [];
+const keys = Object.keys(apartment);
+for (const key of keys) {
+  values.push(apartment[key])
+}
+console.log();
+
+
+const products = [
+  { name: 'Radar', price: 1300, quantity: 4 },
+  { name: 'Scanner', price: 2700, quantity: 3 },
+  { name: 'Droid', price: 400, quantity: 7 },
+  { name: 'Grip', price: 1200, quantity: 9 },
+];
+
+const summ = (product) => product.price * product.quantity;
+
+function calculateTotalPrice(productName) {
+  const product = products.find(item => item.name === productName);
+  if (product) {
+    return summ(product);
+  } else {
+    return `Product ${productName} not found`;
+  }
+}
+
+console.log(calculateTotalPrice('Radar')); // 5200
+console.log(calculateTotalPrice('Scanner')); // 8100
+console.log(calculateTotalPrice('Droid')); // 2800
+console.log(calculateTotalPrice('Grip')); // 10800
+console.log(calculateTotalPrice('Unknown')); // Product Unknown not found
+
+
+function makeTask(data) {
+  const completed = false;
+  const category = "General";
+  const priority = "Normal";
+  return { ...{ category, priority, completed }, ...data };
+}
+
+console.log(makeTask({ text: "Buy bread" }));//{ category: 'General', priority: 'Normal', completed: false }
+
+
+const bookShelf = {
+  books: ["The last kingdom", "Haze", "The guardian of dreams"],
+  updateBook(oldName, newName) {
+    const bookIndex = this.books.indexOf(oldName);
+    this.books.splice(bookIndex, 1, newName);
+    return bookShelf.books;
+  },
+};
+
+bookShelf.updateBook("The last kingdom", "Dune")
+console.log(bookShelf.books);
+
+
+const bookShelf = {
+  books: ["The last kingdom", "Haze", "The guardian of dreams"],
+  updateBook(oldName, newName) {
+    const bookIndex = this.books.indexOf(oldName);
+    this.books.splice(bookIndex, 1, newName );
+  },
+};
+
+bookShelf.updateBook('Haze', 'Dungeon chronicles')
+console.log(bookShelf.books);
+
+
+bookShelf.updateBook('The last kingdom', 'Dune')
+console.log(bookShelf.books);
+
+
+
+// =============================================;;;;;;;;
+
+
+const atTheOldToad = {
+  potions: [
+    { name: 'Speed potion', price: 460 },
+    { name: 'Dragon breath', price: 780 },
+    { name: 'Stone skin', price: 520 },
+  ],
+
+  getPotions() {
+    return this.potions;
+  },
+  addPotion(newPotion) {
+    for (const item of this.potions) {
+      if (item.name === newPotion.name) {
+        return `Error! Potion ${newPotion.name} is already in your inventory!`;
+      }
+    }
+    const newProduct = {
+      ...newPotion,
+    };
+
+    this.potions.push(newPotion);
+  },
+  removePotion(potionName) {
+    for (let i = 0; i < this.potions.length; i += 1) {
+      const potion = this.potions[i];
+      if (potionName === potion.name) {
+        this.potions.splice(i, 1);
+      }
+    }
+  },
+  updatePotionName(oldName, newName) {
+    let resalt = `Potion ${oldName} is not in inventory`;
+    for (let i = 0; i < this.potions.length; i += 1) {
+      const potion = this.potions[i];
+
+      if (oldName === potion.name) {
+        potion.name = newName;
+        resalt = `Found ${oldName} change to ${newName}`;
+      }
+    }
+    return console.log(resalt);
+  },
+};
