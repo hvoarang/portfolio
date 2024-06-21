@@ -1224,6 +1224,7 @@ console.log(bookShelf.books);
 bookShelf.updateBook('one', 'five')
 console.log(bookShelf.books);
 bookShelf.updateBook('five', 'asd')
+bookShelf.updateBook('five', 'asasd')
 console.log(bookShelf.books);
 
 
