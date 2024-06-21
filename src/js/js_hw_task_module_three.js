@@ -1211,19 +1211,22 @@ console.log(bookShelf.books);
 
 
 const bookShelf = {
-  books: ["The last kingdom", "Haze", "The guardian of dreams"],
+  books: ["one", "two", "free"],
   updateBook(oldName, newName) {
     const bookIndex = this.books.indexOf(oldName);
     this.books.splice(bookIndex, 1, newName );
   },
 };
 
-bookShelf.updateBook('Haze', 'Dungeon chronicles')
+bookShelf.updateBook('two', 'four')
+console.log(bookShelf.books);
+
+bookShelf.updateBook('one', 'five')
+console.log(bookShelf.books);
+bookShelf.updateBook('five', 'asd')
 console.log(bookShelf.books);
 
 
-bookShelf.updateBook('The last kingdom', 'Dune')
-console.log(bookShelf.books);
 
 
 
