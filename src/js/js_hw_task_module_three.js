@@ -1277,3 +1277,12 @@ const atTheOldToad = {
     return console.log(resalt);
   },
 };
+
+
+
+//================== Obj
+
+
+const person = Object(date) {
+  name: "asd",
+}
