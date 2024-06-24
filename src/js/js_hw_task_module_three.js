@@ -1283,6 +1283,10 @@ const atTheOldToad = {
 //================== Obj
 
 
-const person = Object(date) {
-  name: "asd",
-}
+const person = Object.create({}, {
+  name: {
+    value: "Valla",
+  },
+  bearth: "",
+})
+console.table(person.name);
