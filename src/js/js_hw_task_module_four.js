@@ -10,6 +10,14 @@
 Значение переменной result получено с помощью вызова функции
 Объявлена переменная pointer
 Значение переменной pointer это ссылка на функцию makePizza
+
+function makePizza() {
+  return "Your pizza is being prepared, please wait.";
+}
+
+const result = null;
+const pointer = null;
+
 //
 // ==================================================
 // ===================== Task 2 =====================
@@ -23,6 +31,18 @@
 Функция makeMessage принимает два параметра, названые согласно задания, pizzaName и callback
 Вызов makeMessage("Royal Grand", makePizza) возвращает строку "Pizza Royal Grand is being prepared, please wait..."
 Вызов makeMessage("Ultracheese", deliverPizza) возвращает строку "Delivering Ultracheese pizza."
+
+
+function deliverPizza(pizzaName) {
+  return `Delivering ${pizzaName} pizza.`;
+}
+function makePizza(pizzaName) {
+  return `Pizza ${pizzaName} is being prepared, please wait...`;
+}
+function makeMessage(pizzaName) {
+  return;
+}
+
 //
 // ==================================================
 // ===================== Task 3 =====================
@@ -33,6 +53,17 @@
 Объявлена функция makePizza
 Функция makePizza принимает два параметра
 Вторым аргументом при вызове makePizza("Ultracheese") передана функция eatPizza с единственным параметром pizzaName
+
+function makePizza(pizzaName, callback) {
+  console.log(`Pizza ${pizzaName} is being prepared, please wait...`);
+  callback(pizzaName);
+}
+makePizza("Royal Grand", function deliverPizza(pizzaName) {
+  console.log(`Delivering pizza ${pizzaName}.`);
+});
+
+makePizza("Ultracheese");
+
 //
 // ==================================================
 // ===================== Task 4 =====================
@@ -49,6 +80,23 @@
 Вызов pizzaPalace.order("Four meats", makePizza, onOrderError) возвращает "Your order is accepted. Cooking pizza Four meats."
 Вызов pizzaPalace.order("Big Mike", makePizza, onOrderError) возвращает "Error! There is no pizza with a name Big Mike in the assortment."
 Вызов pizzaPalace.order("Vienna", makePizza, onOrderError) возвращает "Error! There is no pizza with a name Vienna in the assortment."
+
+
+const pizzaPalace = {
+  pizzas: ['Ultracheese', 'Smoked', 'Four meats'],
+  order(pizzaName) {},
+};
+function makePizza(pizzaName) {
+  return `Your order is accepted. Cooking pizza ${pizzaName}.`;
+}
+function onOrderError(error) {
+  return `Error! ${error}`;
+}
+pizzaPalace.order('Smoked', makePizza, onOrderError);
+pizzaPalace.order('Four meats', makePizza, onOrderError);
+pizzaPalace.order('Big Mike', makePizza, onOrderError);
+pizzaPalace.order('Vienna', makePizza, onOrderError);
+
 //
 // ==================================================
 // ===================== Task 5 =====================
@@ -64,6 +112,17 @@
 Вызов функции calculateTotalPrice([164, 48, 291]) возвращает 503
 Вызов функции calculateTotalPrice([412, 371, 94, 63, 176]) возвращает 1116
 Вызов функции со случайными, но валидными аргументами, возвращает правильное значение
+
+function calculateTotalPrice(orderedItems) {
+  let totalPrice = 0;
+  for (let i = 0; i < orderedItems.length; i += 1) {
+    totalPrice += orderedItems[i];
+  }
+  return totalPrice;
+
+}
+console.log(calculateTotalPrice([12, 85, 37, 4]));
+
 //
 // ==================================================
 // ===================== Task 6 =====================
@@ -81,6 +140,18 @@
 Вызов функции filterArray([12, 24, 8, 41, 76], 38) возвращает [41, 76]
 Вызов функции filterArray([12, 24, 8, 41, 76], 20) возвращает [24, 41, 76]
 Вызов функции со случайными, но валидными аргументами, возвращает правильное значение
+
+function filterArray(numbers, value) {
+  const filteredNumbers = [];
+
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] > value) {
+      filteredNumbers.push(numbers[i]);
+    }
+  }
+  return filteredNumbers;
+}
+
 //
 // ==================================================
 // ===================== Task 7 =====================
@@ -98,6 +169,19 @@
 Вызов getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]) возвращает [10, 30, 40]
 Вызов getCommonElements([1, 2, 3], [10, 20, 30]) возвращает []
 Вызов функции со случайными, но валидными аргументами, возвращает правильное значение
+
+function getCommonElements(firstArray, secondArray) {
+  const commonElements = [];
+
+  for (let i = 0; i < firstArray.length; i += 1) {
+    if (secondArray.includes(firstArray[i])) {
+      commonElements.push(firstArray[i]);
+    }
+  }
+
+  return commonElements;
+}
+
 //
 // ==================================================
 // ===================== Task 8 =====================
@@ -111,6 +195,11 @@
 Вызов calculateTotalPrice(8, 60) возвращает 480
 Вызов calculateTotalPrice(3, 400) возвращает 1200
 Вызов функции со случайными, но валидными аргументами, возвращает правильное значение
+
+function calculateTotalPrice(quantity, pricePerItem) {
+  return quantity * pricePerItem;
+}
+
 //
 // ==================================================
 // ===================== Task 9 =====================
@@ -125,6 +214,11 @@
 Вызов calculateTotalPrice(8, 60) возвращает 480
 Вызов calculateTotalPrice(3, 400) возвращает 1200
 Вызов функции со случайными, но валидными аргументами, возвращает правильное значение
+
+const calculateTotalPrice = (quantity, pricePerItem) => {
+  return quantity * pricePerItem;
+};
+
 //
 // ==================================================
 // ===================== Task 10 ====================
@@ -140,6 +234,18 @@
 Вызов функции calculateTotalPrice([164, 48, 291]) возвращает 503
 Вызов функции calculateTotalPrice([412, 371, 94, 63, 176]) возвращает 1116
 Вызов функции со случайными, но валидными аргументами, возвращает правильное значение
+
+
+function calculateTotalPrice(orderedItems) {
+  let totalPrice = 0;
+
+  orderedItems.forEach(function (item) {
+    totalPrice += item;
+  });
+
+  return totalPrice;
+}
+
 //
 // ==================================================
 // ===================== Task 11 ====================
@@ -157,6 +263,19 @@
 Вызов функции filterArray([12, 24, 8, 41, 76], 38) возвращает [41, 76]
 Вызов функции filterArray([12, 24, 8, 41, 76], 20) возвращает [24, 41, 76]
 Вызов функции со случайными, но валидными аргументами, возвращает правильное значение
+
+
+function filterArray(numbers, value) {
+  const filteredNumbers = [];
+
+  numbers.forEach(function (number) {
+    if (number > value) {
+      filteredNumbers.push(number);
+    }
+  });
+  return filteredNumbers;
+}
+
 //
 // ==================================================
 // ===================== Task 12 ====================
@@ -175,6 +294,19 @@
 Вызов getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]) возвращает [10, 30, 40]
 Вызов getCommonElements([1, 2, 3], [10, 20, 30]) возвращает []
 Вызов функции со случайными, но валидными аргументами, возвращает правильное значение
+
+
+function getCommonElements(firstArray, secondArray) {
+  const commonElements = [];
+
+  firstArray.forEach(function (element) {
+    if (secondArray.includes(element)) {
+      commonElements.push(element);
+    }
+  });
+  return commonElements;
+}
+
 //
 // ==================================================
 // ===================== Task 13 =====================
@@ -191,6 +323,15 @@
 Вызов changeEven([17, 24, 68, 31, 42], 100) возвращает новый массив [17, 124, 168, 31, 142]
 Вызов changeEven([44, 13, 81, 92, 36, 54], 100) возвращает новый массив [144, 13, 81, 192, 136, 154]
 Вызов функции со случайными, но валидными аргументами, возвращает правильное значение
+
+function changeEven(numbers, value) {
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] % 2 === 0) {
+      numbers[i] = numbers[i] + value;
+    }
+  }
+}
+
 //
 // ==================================================
 // ===================== Task 14 =====================
@@ -203,6 +344,10 @@
 Объявлена переменная planetsLengths
 Значение переменной planetsLengths это массив [5, 4, 5, 7]
 Для перебора массива планет использован метод map()
+
+const planets = ["Earth", "Mars", "Venus", "Jupiter"];
+const planetsLengths = planets;
+
 //
 // ==================================================
 // ===================== Task 15 ====================
@@ -215,6 +360,29 @@
 Объявлена переменная titles
 Значение переменной titles это массив ["The Last Kingdom", "Beside Still Waters", "The Dream of a Ridiculous Man", "Redder Than Blood", "Enemy of God"]
 Для перебора массива books используется метод map() как чистая функция
+
+const books = [
+  {
+    title: "The Last Kingdom",
+    author: "Bernard Cornwell",
+    rating: 8.38,
+  },
+  {
+    title: "Beside Still Waters",
+    author: "Robert Sheckley",
+    rating: 8.51,
+  },
+  {
+    title: "The Dream of a Ridiculous Man",
+    author: "Fyodor Dostoevsky",
+    rating: 7.75,
+  },
+  { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+  { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+];
+
+const titles = books;
+
 //
 // ==================================================
 // ===================== Task 16 ====================
@@ -227,6 +395,27 @@
 Объявлена переменная genres
 Значение переменной genres это массив [ "adventure", "history", "fiction", "horror", "mysticism" ]
 Для перебора массива books используется метод flatMap()
+
+const books = [
+  {
+    title: "The Last Kingdom",
+    author: "Bernard Cornwell",
+    genres: ["adventure", "history"],
+  },
+  {
+    title: "Beside Still Waters",
+    author: "Robert Sheckley",
+    genres: ["fiction"],
+  },
+  {
+    title: "Redder Than Blood",
+    author: "Tanith Lee",
+    genres: ["horror", "mysticism"],
+  },
+];
+
+const genres = books;
+
 //
 // ==================================================
 // ===================== Task 17 ====================
@@ -243,6 +432,12 @@
 Вызов функции с указанным массивом пользователей возвращает массив ["Moore Hensley", "Sharlene Bush", "Ross Vazquez", "Elma Head", "Carey Barr", "Blackburn Dotson", "Sheree Anthony"]
 
 Вызов функции со случайными, но валидными аргументами, возвращает правильное значение
+
+
+const getUserNames = users => {
+    
+
+  };
 //
 // ==================================================
 // ===================== Task 18 ====================
@@ -255,6 +450,12 @@
 Для перебора параметра users используется метод map()
 Вызов функции с указанным массивом пользователей возвращает массив ["moorehensley@indexia.com", "sharlenebush@tubesys.com", "rossvazquez@xinware.com", "elmahead@omatom.com", "careybarr@nurali.com", "blackburndotson@furnigeer.com", "shereeanthony@kog.com"]
 Вызов функции со случайными, но валидными аргументами, возвращает правильное значение
+
+
+const getUserEmails = users => {
+    
+
+  };
 //
 // ==================================================
 // ===================== Task 19 ====================
@@ -269,6 +470,11 @@
 Объявлена переменная oddNumbers
 Значение переменной oddNumbers это массив [17, 61, 47, 73]
 Для перебора массива numbers использован метод filter()
+
+const numbers = [17, 24, 82, 61, 36, 18, 47, 52, 73];
+
+const evenNumbers = numbers;
+const oddNumbers = numbers;
 //
 // ==================================================
 // ===================== Task 20 ====================
@@ -284,6 +490,27 @@
 Значение переменной uniqueGenres это массив ["adventure", "history", "fiction", "mysticism", "horror"]
 Для вычисления значения переменной allGenders использован метод flatMap()
 Для вычисления значения переменной uniqueGenres использован метод filter()
+
+const books = [
+  {
+    title: "The Last Kingdom",
+    author: "Bernard Cornwell",
+    genres: ["adventure", "history"],
+  },
+  {
+    title: "Beside Still Waters",
+    author: "Robert Sheckley",
+    genres: ["fiction", "mysticism"],
+  },
+  {
+    title: "Redder Than Blood",
+    author: "Tanith Lee",
+    genres: ["horror", "mysticism", "adventure"],
+  },
+];
+const allGenres = books;
+const uniqueGenres = allGenres;
+
 //
 // ==================================================
 // ===================== Task 21 ====================
@@ -304,6 +531,33 @@
 Объявлена переменная booksByAuthor
 Значение переменной booksByAuthor это массив книг автор которых "Bernard Cornwell"
 Для перебора массива books использован метод filter()
+
+const books = [
+  {
+    title: "The Last Kingdom",
+    author: "Bernard Cornwell",
+    rating: 8.38,
+  },
+  {
+    title: "Beside Still Waters",
+    author: "Robert Sheckley",
+    rating: 8.51,
+  },
+  {
+    title: "The Dream of a Ridiculous Man",
+    author: "Fyodor Dostoevsky",
+    rating: 7.75,
+  },
+  { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+  { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+];
+
+const MIN_RATING = 8;
+const AUTHOR = "Bernard Cornwell";
+
+const topRatedBooks = books;
+const booksByAuthor = books;
+
 //
 // ==================================================
 // ===================== Task 22 ====================
@@ -319,6 +573,11 @@
 Если значение параметра color это "brown", функция возвращает массив объектов пользователей с именами Blackburn Dotson и Sheree Anthony
 Если значение параметра color это любая другая строка, функция возвращает пустой массив
 Вызов функции со случайными, но валидными аргументами, возвращает правильное значение
+
+
+const getUsersWithEyeColor = (users, color) => {
+};
+
 //
 // ==================================================
 // ===================== Task 23 ====================
@@ -333,6 +592,11 @@
 Если значение параметров minAge и maxAge равны 30 и 40 соотвественно, функция возвращает массив объектов пользователей с именами Moore Hensley, Sharlene Bush, Blackburn Dotson, Sheree Anthony
 Если значение параметров minAge и maxAge равны 80 и 100 соотвественно, функция возвращает пустой массив
 Вызов функции со случайными, но валидными аргументами, возвращает правильное значение
+
+
+const getUsersWithAge = (users, minAge, maxAge) => {
+};
+
 //
 // ==================================================
 // ===================== Task 24 ====================
@@ -347,6 +611,11 @@
 Если значение параметра friendName это строка "Goldie Gentry", функция возвращает массив объектов пользователей с именами Elma Head и Sheree Anthony
 Если значение параметра friendName это строка "Adrian Cross", функция возвращает пустой массив
 Вызов функции со случайными, но валидными аргументами, возвращает правильное значение
+
+
+const getUsersWithFriend = (users, friendName) => {   
+};
+
 //
 // ==================================================
 // ===================== Task 25 ====================
@@ -358,6 +627,11 @@
 Переменной getFriends присвоена стрелочная функция с параметром (users)
 Вызов функции с указанным массивом пользователей возвращает массив ["Sharron Pace", "Briana Decker", "Marilyn Mcintosh", "Padilla Garrison", "Naomi Buckner", "Goldie Gentry", "Aisha Tran", "Jordan Sampson", "Eddie Strong", "Jacklyn Lucas", "Linda Chapman"]
 Вызов функции со случайными, но валидными аргументами, возвращает правильное значение
+
+
+const getFriends = (users) => {   
+};
+
 //
 // ==================================================
 // ===================== Task 26 ====================
@@ -369,6 +643,11 @@
 Для перебора параметра users используется метод filter()
 Вызов функции с указанным массивом пользователей возвращает массив объектов пользователей с именами Sharlene Bush, Elma Head, Carey Barr и Sheree Anthony
 Вызов функции со случайными, но валидными аргументами, возвращает правильное значение
+
+
+const getActiveUsers = (users) => {   
+};
+
 //
 // ==================================================
 // ===================== Task 27 ====================
@@ -382,6 +661,11 @@
 Для перебора параметра users используется метод filter()
 Вызов функции с указанным массивом пользователей возвращает массив объектов пользователей с именами Moore Hensley, Ross Vazquez и Blackburn Dotson
 Вызов функции со случайными, но валидными аргументами, возвращает правильное значение
+
+
+const getInactiveUsers = (users) => {   
+};
+
 //
 // ==================================================
 // ===================== Task 28 ====================
@@ -402,6 +686,33 @@
 Объявлена переменная bookByAuthor
 Значение переменной bookByAuthor это объект книги автора "Robert Sheckley"
 Для перебора массива books использован метод find()
+
+const books = [
+  {
+    title: 'The Last Kingdom',
+    author: 'Bernard Cornwell',
+    rating: 8.38,
+  },
+  {
+    title: 'Beside Still Waters',
+    author: 'Robert Sheckley',
+    rating: 8.51,
+  },
+  {
+    title: 'The Dream of a Ridiculous Man',
+    author: 'Fyodor Dostoevsky',
+    rating: 7.75,
+  },
+  { title: 'Redder Than Blood', author: 'Tanith Lee', rating: 7.94 },
+];
+const BOOK_TITLE = 'The Dream of a Ridiculous Man';
+const AUTHOR = 'Robert Sheckley';
+
+
+const bookWithTitle = books;
+const bookByAuthor = books;
+
+
 //
 // ==================================================
 // ===================== Task 29 ====================
@@ -422,6 +733,11 @@
 Если в массиве users нет пользователя с почтой из параметра email, функция возвращает undefined
 
 Вызов функции со случайными, но валидными аргументами, возвращает правильное значение
+
+
+const getUserWithEmail = (users, email) => {   
+};
+
 //
 // ==================================================
 // ===================== Task 30 ====================
@@ -454,6 +770,20 @@
 Объявлена переменная eachElementInThirdIsOdd
 Значение переменной eachElementInThirdIsOdd это буль false
 Для перебора массивов использован метод every()
+
+const firstArray = [26, 94, 36, 18];
+const secondArray = [17, 61, 23];
+const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+
+
+const eachElementInFirstIsEven = firstArray;
+const eachElementInFirstIsOdd = firstArray;
+
+const eachElementInSecondIsEven = secondArray;
+const eachElementInSecondIsOdd = secondArray;
+
+const eachElementInThirdIsEven = thirdArray;
+const eachElementInThirdIsOdd = thirdArray;
 //
 // ==================================================
 // ===================== Task 31 ====================
@@ -466,6 +796,11 @@
 Для перебора параметра users используется метод every()
 Вызов функции с указанным массивом пользователей возвращает false
 Вызов функции со случайными, но валидными аргументами, возвращает правильное значение
+
+
+const isEveryUserActive = (users) => {   
+};
+
 //
 // ==================================================
 // ===================== Task 32 ====================
@@ -498,6 +833,22 @@
 Объявлена переменная anyElementInThirdIsOdd
 Значение переменной anyElementInThirdIsOdd это буль true
 Для перебора массивов использован метод some()
+
+
+const firstArray = [26, 94, 36, 18];
+const secondArray = [17, 61, 23];
+const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+
+
+const anyElementInFirstIsEven = firstArray;
+const anyElementInFirstIsOdd = firstArray;
+
+const anyElementInSecondIsEven = secondArray;
+const anyElementInSecondIsOdd = secondArray;
+
+const anyElementInThirdIsEven = thirdArray;
+const anyElementInThirdIsOdd = thirdArray;
+
 //
 // ==================================================
 // ===================== Task 33 ====================
@@ -509,6 +860,11 @@
 Для перебора параметра users используется метод some()
 Вызов функции с указанным массивом пользователей возвращает true
 Вызов функции со случайными, но валидными аргументами, возвращает правильное значение
+
+
+const isAnyUserActive = users => {   
+};
+
 //
 // ==================================================
 // ===================== Task 34 ====================
@@ -525,6 +881,17 @@
 Для перебора массива playtimes используется метод reduce()
 Объявлена переменная averagePlayTime
 Значение переменной averagePlayTime это число 673
+
+const players = {
+  mango: 1270,
+  poly: 468,
+  ajax: 710,
+  kiwi: 244
+};
+const playtimes = Object.values(players); // [1270, 468, 710, 244]
+
+const totalPlayTime = playtimes;
+const averagePlayTime = totalPlayTime / playtimes.length;
 //
 // ==================================================
 // ===================== Task 35 ====================
@@ -537,6 +904,15 @@
 Объявлена переменная totalAveragePlaytimePerGame
 Значение переменной totalAveragePlaytimePerGame это число 1023
 Для перебора массива players используется метод reduce()
+
+const players = [
+  { name: "Mango", playtime: 1270, gamesPlayed: 4 },
+  { name: "Poly", playtime: 469, gamesPlayed: 2 },
+  { name: "Ajax", playtime: 690, gamesPlayed: 3 },
+  { name: "Kiwi", playtime: 241, gamesPlayed: 1 },
+];
+const totalAveragePlaytimePerGame = players;
+
 //
 // ==================================================
 // ===================== Task 36 ====================
@@ -549,6 +925,11 @@
 Для перебора параметра users используется метод reduce()
 Вызов функции с указанным массивом пользователей возвращает число 20916
 Вызов функции со случайными, но валидными аргументами, возвращает правильное значение
+
+
+const calculateTotalBalance = users => {   
+};
+
 //
 // ==================================================
 // ===================== Task 37 =====================
@@ -561,6 +942,11 @@
 Для перебора параметра users используется метод reduce()
 Вызов функции с указанным массивом пользователей возвращает число 14
 Вызов функции со случайными, но валидными аргументами, возвращает правильное значение
+
+
+const getTotalFriendCount = users => {   
+};
+
 //
 // ==================================================
 // ===================== Task 38 =====================
@@ -577,6 +963,18 @@
 Объявлена переменная alphabeticalAuthors
 Значение переменной alphabeticalAuthors это массив ["Bernard Cornwell", "Tanith Lee", "Robert Sheckley", "Fyodor Dostoevsky"]
 Использован метод sort()
+
+const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+const authors = [
+  "Tanith Lee",
+  "Bernard Cornwell",
+  "Robert Sheckley",
+  "Fyodor Dostoevsky",
+];
+
+const ascendingReleaseDates = releaseDates;
+const alphabeticalAuthors = authors;
+
 //
 // ==================================================
 // ===================== Task 39 ====================
@@ -591,6 +989,12 @@
 Объявлена переменная descendingReleaseDates
 Значение переменной descendingReleaseDates это массив [2016, 2012, 2008, 1997, 1984, 1973, 1967]
 Использован метод sort()
+
+const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+
+
+const ascendingReleaseDates = releaseDates;
+const descendingReleaseDates = releaseDates;
 //
 // ==================================================
 // ===================== Task 40 ====================
@@ -605,6 +1009,18 @@
 Объявлена переменная authorsInReversedOrder
 Значение переменной authorsInReversedOrder это массив ["Tanith Lee", "Robert Sheckley", "Howard Lovecraft", "Fyodor Dostoevsky", "Bernard Cornwell"]
 Использован метод sort()
+
+const authors = [
+  "Tanith Lee",
+  "Bernard Cornwell",
+  "Robert Sheckley",
+  "Fyodor Dostoevsky",
+  "Howard Lovecraft",
+];
+
+const authorsInAlphabetOrder = authors;
+const authorsInReversedOrder = authors;
+
 //
 // ==================================================
 // ===================== Task 41 ====================
@@ -627,6 +1043,32 @@
 Объявлена переменная sortedByDescentingRating
 Значение переменной sortedByDescentingRating это массив книг отсортированный по убыванию рейтинга
 Для перебора массива books используется метод sort()
+
+const books = [
+  {
+    title: "The Last Kingdom",
+    author: "Bernard Cornwell",
+    rating: 8.38,
+  },
+  {
+    title: "Beside Still Waters",
+    author: "Robert Sheckley",
+    rating: 8.51,
+  },
+  {
+    title: "The Dream of a Ridiculous Man",
+    author: "Fyodor Dostoevsky",
+    rating: 7.75,
+  },
+  { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+  { title: "Enemy of God", author: "Bernard Cornwell", rating: 8.67 },
+];
+
+const sortedByAuthorName = books;
+const sortedByReversedAuthorName = books;
+const sortedByAscendingRating = books;
+const sortedByDescentingRating = books;
+
 //
 // ==================================================
 // ===================== Task 42 ====================
@@ -640,6 +1082,11 @@
 Вызов функции с указанным массивом пользователей возвращает новый массив пользователей отсортированный по возрастанию их баланса
 Вызов функции со случайными, но валидными аргументами, возвращает правильное значение
 Для перебора параметра users использован метод sort()
+
+
+const sortByAscendingBalance = users => {
+};
+
 //
 // ==================================================
 // ===================== Task 43 ====================
@@ -653,6 +1100,11 @@
 Для перебора параметра users использован метод sort()
 Вызов функции с указанным массивом пользователей возвращает новый массив пользователей отсортированный по убыванию количества их друзей
 Вызов функции со случайными, но валидными аргументами, возвращает правильное значение
+
+
+const sortByDescendingFriendCount = users => {   
+};
+
 //
 // ==================================================
 // ===================== Task 44 ====================
@@ -666,6 +1118,11 @@
 Для перебора параметра users использован метод sort()
 Вызов функции с указанным массивом пользователей возвращает новый массив пользователей отсортированный по имени в алфавитном порядке
 Вызов функции со случайными, но валидными аргументами, возвращает правильное значение
+
+
+const sortByName = users => {   
+};
+
 //
 // ==================================================
 // ===================== Task 45 ====================
@@ -681,6 +1138,33 @@
 Значение переменной names это массив ["Bernard Cornwell", "Howard Lovecraft", "Robert Sheckley"]
 Нет объявленых переменных кроме books, MIN_BOOK_RATING и names
 Используется цепочка методов filter, map, sort
+
+const books = [
+  {
+    title: "The Last Kingdom",
+    author: "Bernard Cornwell",
+    rating: 8.38,
+  },
+  {
+    title: "Beside Still Waters",
+    author: "Robert Sheckley",
+    rating: 8.51,
+  },
+  {
+    title: "The Dream of a Ridiculous Man",
+    author: "Fyodor Dostoevsky",
+    rating: 7.75,
+  },
+  { title: "Redder Than Blood", author: "Tanith Lee", rating: 7.94 },
+  {
+    title: "The Dreams in the Witch House",
+    author: "Howard Lovecraft",
+    rating: 8.67,
+  },
+];
+const MIN_BOOK_RATING = 8;
+const names = books;
+
 //
 // ==================================================
 // ===================== Task 46 ====================
@@ -694,6 +1178,11 @@
 Значение параметра users не изменяется
 Вызов функции с указанным массивом пользователей возвращает массив ["Moore Hensley", "Sharlene Bush", "Elma Head", "Sheree Anthony", "Ross Vazquez", "Carey Barr", "Blackburn Dotson"]
 Вызов функции со случайными, но валидными аргументами, возвращает правильное значение
+
+
+const getNamesSortedByFriendCount = users => {   
+};
+
 //
 // ==================================================
 // ===================== Task 47 ====================
@@ -707,6 +1196,11 @@
 Значение параметра users не изменяется
 Вызов функции с указанным массивом пользователей возвращает массив ["Adrian Cross", "Aisha Tran", "Briana Decker", "Eddie Strong", "Goldie Gentry", "Jacklyn Lucas", "Jordan Sampson", "Linda Chapman", "Marilyn Mcintosh", "Naomi Buckner", "Padilla Garrison", "Sharron Pace", "Solomon Fokes"]
 Вызов функции со случайными, но валидными аргументами, возвращает правильное значение
+
+
+const getSortedFriends = users => {   
+};
+
 //
 // ==================================================
 // ===================== Task 48 ====================
@@ -721,6 +1215,11 @@
 Если значение параметра gender это строка "male", функция возвращает число 12053
 Если значение параметра gender это строка "female", функция возвращает число 8863
 Вызов функции со случайными, но валидными аргументами, возвращает правильное значение
+
+
+const getSortedFriends = users => {   
+};
+
 //
 //
 
