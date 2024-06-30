@@ -1218,6 +1218,7 @@ const getSortedFriends = users => {
 
 
 const getSortedFriends = users => {   
+  let coun = 0
 };
 
 //
