@@ -1224,3 +1224,48 @@ const getSortedFriends = users => {
 //
 //
 
+
+const hotel = {
+  username: "Resort hotel",
+  showThis() {
+    const foo = () => {
+      // Стрілки запам'ятовують контекст під час оголошення
+      // з батьківської області видимості
+      console.log("this in foo: ", this);
+    };
+
+    foo();
+    console.log("this in showThis: ", this);
+  },
+};
+
+hotel.showThis();
+// this in foo: {username: 'Resort hotel', showThis: ƒ}
+// this in showThis: {username: 'Resort hotel',showThis: ƒ}
+
+
+
+
+const customer = {
+   firstName : "Джейкоб" ,
+   lastName : "Мерсер" ,
+   getFullName() {
+     return  ` ${ this .firstName}  ${ this .lastName} ` ;
+  },
+};
+function makeMessage(callback) {
+  console . log ( `Обрабатываем заявку от ${callback()} .` );
+}
+
+makeMessage(customer.getFullName.bind(customer))
+
+
+const baseSalary = 30000;
+const overtime = 10;
+const rate = 20;
+
+const getWage = (baseSalary, overtime, rate) => {
+  return baseSalary + overtime * rate;
+};
+
+getWage(baseSalary, overtime, rate);
