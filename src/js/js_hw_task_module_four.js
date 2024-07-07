@@ -1269,3 +1269,4 @@ const getWage = (baseSalary, overtime, rate) => {
 };
 
 getWage(baseSalary, overtime, rate);
+getWage(baseSalary, overtime, rate);
