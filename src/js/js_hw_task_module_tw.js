@@ -139,3 +139,17 @@ console.log(editor.email); // 'mango@mail.com'
 editor.addPost("post-1");
 console.log(editor.posts); // ['post-1']
 
+
+const carrot = {
+  color: "orange",
+}
+
+const apple = {
+  color: "red",
+
+  printColor() {
+    console.log(this.color);
+  },
+}
+
+apple.printColor.bind(carrot)()
