@@ -153,3 +153,27 @@ const apple = {
 }
 
 apple.printColor.bind(carrot)()
+
+const fruits = {
+  fruit: "apple",
+  color: "red",
+ 
+  getFruit() {
+    console.log(this.fruit).push("orange");
+  },
+  setFruit(newFruit) {
+    this.fruit = newFruit
+  }
+}
+
+fruits.fruit("banana") 
+console.log(newFruit);
+
+const box = {
+  itemName: "pansel",
+  itemWight: 5,
+
+  getItem() {
+    
+  }
+}
