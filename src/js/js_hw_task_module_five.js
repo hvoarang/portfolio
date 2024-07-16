@@ -777,4 +777,3 @@ mango.blacklist("poly@mail.com");
 console.log(mango.blacklistedEmails); // ["poly@mail.com"]
 console.log(mango.isBlacklisted("mango@mail.com")); // false
 console.log(mango.isBlacklisted("poly@mail.com")); // true
-console.log(mango.isBlacklisted("poly@mail.com")); // true
