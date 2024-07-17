@@ -778,3 +778,41 @@ console.log(mango.blacklistedEmails); // ["poly@mail.com"]
 console.log(mango.isBlacklisted("mango@mail.com")); // false
 console.log(mango.isBlacklisted("poly@mail.com")); // true
 console.log(mango.isBlacklisted("poly@mail.com")); // true
+
+
+class Car {
+  static #MAX_PRICE = 50000;
+  static checkPrice(price) {
+    return price > this.#MAX_PRICE
+      ? 'Error! Price exceeds the maximum'
+      : 'Success! Price is within acceptable limits'
+  }
+  constructor({ price }) {
+    this.price = price;
+  }
+}
+
+const audi = new Car({ price: 36000 });
+const bmw = new Car({ price: 64000 });
+
+console.log(Car.checkPrice(audi.price)); // "Success! Price is within acceptable limits"
+console.log(Car.checkPrice(bmw.price)); // "Error! Price exceeds the maximum"
+
+class Car {
+  static #MAX_PRICE = 50000;
+  static checkPrice(price) {
+    return price > this.#MAX_PRICE
+      ? 'Error! Price exceeds the maximum'             
+      : 'Success! Price is within acceptable limits'
+    
+  }
+  constructor({ price }) {
+    this.price = price;
+  }
+}
+
+const audi = new Car({ price: 36000 });
+const bmw = new Car({ price: 64000 });
+
+console.log(Car.checkPrice(audi.price));
+console.log(Car.checkPrice(bmw.price));
