@@ -816,3 +816,4 @@ const bmw = new Car({ price: 64000 });
 
 console.log(Car.checkPrice(audi.price));
 console.log(Car.checkPrice(bmw.price));
+console.log(Car.checkPrice(bmw.price));
