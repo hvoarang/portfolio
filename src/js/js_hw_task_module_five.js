@@ -838,3 +838,65 @@ const closeBtn = document.querySelector('.editor button[data-action="close"]');
 
 console.log(saveBtn.dataset.action); //save
 console.log(closeBtn.dataset.action); //close
+
+
+
+
+const заголовок = document.createElement( "h1" ) ; 
+console.log(заголовок) ; // <h1></h1>
+
+heading.textContent =  "Это заголовок" ; 
+console.log(heading) ; // <h1>Это заголовок</h1>
+
+const image = document.createElement( "img" ) ; 
+image.src =  "https://placeimg.com/640/480/nature" ; 
+image.alt =  "Природа" ; 
+console.log(image) ; // <img src="https://placeimg.com/640/480/nature" alt="Природа" />
+
+
+const list = document.querySelector(".usernames");
+
+// Adds an item to the end of the list
+const lastItem = document.createElement("li");
+lastItem.textContent = "Poly";
+list.append(lastItem);
+
+// Adds an item to the beginning of the list
+const firstItem = document.createElement("li");
+firstItem.textContent = "Ajax";
+list.prepend(firstItem);
+
+
+const technologies = ["HTML", "CSS", "JavaScript", "React", "Node"];
+const list = document.querySelector(".list");
+
+const markup = technologies
+  .map((technology) => `<li class="list-item">${technology}</li>`)
+  .join("");
+
+// Check the console, you'll see a single string with HTML tags
+console.log(markup);
+
+// Adding all the markup in one operation
+list.innerHTML = markup;
+
+
+const article = document.querySelector(".article");
+const htmlString = `<p class="article-text">Nullam quis ante. Vestibulum dapibus nunc ac augue. In consectetuer turpis ut velit.</p>
+   <a class="link" href="#">Read more...</a>`;
+
+// Replace += with = operator. See the difference? 
+// Article title is lost because we overwrite element content.
+article.innerHTML += htmlString;
+
+
+
+const list = document.querySelector(".list");
+
+const newTechnologies = ["React", "TypeScript", "Node.js"];
+const markup = newTechnologies
+  .map((technology) => `<li class="list-item new">${technology}</li>`)
+  .join("");
+
+list.insertAdjacentHTML("beforeend", markup);
+list.insertAdjacentHTML("beforebegin", "<h2>Popular technologies</h2>");
