@@ -900,3 +900,4 @@ const markup = newTechnologies
 
 list.insertAdjacentHTML("beforeend", markup);
 list.insertAdjacentHTML("beforebegin", "<h2>Popular technologies</h2>");
+list.insertAdjacentHTML("beforebegin", "<h2>Popular technologies</h2>");
