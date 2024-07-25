@@ -177,3 +177,11 @@ const box = {
     
   }
 }
+const box = {
+  itemName: "pansel",
+  itemWight: 5,
+
+  getItem() {
+    
+  }
+}
