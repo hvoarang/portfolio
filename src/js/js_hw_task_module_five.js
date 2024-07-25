@@ -15,3 +15,7 @@ removeListenerBtn.addEventListener('click', () => {
   btn.removeEventListener('click', handleClick);
   console.log('click event listener was removed from btn');
 });
+removeListenerBtn.addEventListener('click', () => {
+  btn.removeEventListener('click', handleClick);
+  console.log('click event listener was removed from btn');
+});
