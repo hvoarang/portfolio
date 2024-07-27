@@ -177,11 +177,18 @@ const box = {
     
   }
 }
-const box = {
-  itemName: "pansel",
-  itemWight: 5,
 
-  getItem() {
-    
-  }
+const select = document.querySelector(".pizza-select");
+const textOutput = document.querySelector(".text-output");
+const valueOutput = document.querySelector(".value-output");
+
+select.addEventListener("change", setOutput);
+
+function setOutput(e) {
+  const selectedOptionValue = e.currentTarget.value;
+  const selectedOptionIndex = e.currentTarget.selectedIndex;
+  const selectedOptionText =  e.currentTarget.options[selectedOptionIndex].text;
+
+  textOutput.textContent = selectedOptionText;
+  valueOutput.textContent = selectedOptionValue;
 }
