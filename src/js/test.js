@@ -1,43 +1,43 @@
-const atTheOldToad = {
-  potions: [
-    { name: 'Speed potion', price: 460 },
-    { name: 'Dragon breath', price: 780 },
-    { name: 'Stone skin', price: 520 },
-  ],
+const colorPalette = document.querySelector('.color-palette');
+const output = document.querySelector('.output');
 
-  getPotions() {
-    return this.potions;
-  },
-  addPotion(newPotion) {
-    for (const item of this.potions) {
-      if (item.name === newPotion.name) {
-        return `Error! Potion ${newPotion.name} is already in your inventory!`;
-      }
-    }
-    const newProduct = {
-      ...newPotion,
-    };
+colorPalette.addEventListener('click', selectColor);
 
-    this.potions.push(newPotion);
-  },
-  removePotion(potionName) {
-    for (let i = 0; i < this.potions.length; i += 1) {
-      const potion = this.potions[i];
-      if (potionName === potion.name) {
-        this.potions.splice(i, 1);
-      }
-    }
-  },
-  updatePotionName(oldName, newName) {
-    let resalt = `Potion ${oldName} is not in inventory`;
-    for (let i = 0; i < this.potions.length; i += 1) {
-      const potion = this.potions[i];
+// This is where delegation «magic» happens
+function selectColor(event) {
+  if (event.target.nodeName !== 'BUTTON') {
+    return;
+  }
 
-      if (oldName === potion.name) {
-        potion.name = newName;
-        resalt = `Found ${oldName} change to ${newName}`;
-      }
-    }
-    return console.log(resalt);
-  },
-};
+  const selectedColor = event.target.dataset.color;
+  output.textContent = `Selected color: ${selectedColor}`;
+  output.style.color = selectedColor;
+}
+
+// Some helper functions to render palette items
+createPaletteItems();
+
+function createPaletteItems() {
+  const items = [];
+  for (let i = 0; i < 60; i++) {
+    const color = getRandomHexColor();
+    const item = document.createElement('button');
+    item.type = 'button';
+    item.dataset.color = color;
+    item.style.backgroundColor = color;
+    item.classList.add('item');
+    items.push(item);
+  }
+  colorPalette.append(...items);
+}
+
+function getRandomHexColor() {
+  const letters = '0123456789ABCDEF';
+  let color = '#';
+
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+
+  return color;
+}
