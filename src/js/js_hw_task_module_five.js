@@ -1,21 +1,45 @@
-const addListenerBtn = document.querySelector('.js-add');
-const removeListenerBtn = document.querySelector('.js-remove');
-const btn = document.querySelector('.target-btn');
-
-const handleClick = () => {
-  console.log('click event listener callback');
+const vanillaOutput = document.querySelector('.output.vanilla');
+const throttledOutput = document.querySelector('.output.throttled');
+const trailingOutput = document.querySelector('.output.trailing');
+const leadingOutput = document.querySelector('.output.leading');
+const eventCounter = {
+  vanilla: 0,
+  throttled: 0,
+  trailing: 0,
+  leading: 0,
 };
 
-addListenerBtn.addEventListener('click', () => {
-  btn.addEventListener('click', handleClick);
-  console.log('click event listener was added to btn');
+// Trailing debounce
+document.addEventListener(
+  'scroll',
+  _.debounce(() => {
+    eventCounter.trailing += 1;
+    trailingOutput.textContent = eventCounter.trailing;
+  }, 300)
+);
+
+// Leading debounce
+document.addEventListener(
+  'scroll',
+  _.debounce(
+    () => {
+      eventCounter.leading += 1;
+      leadingOutput.textContent = eventCounter.leading;
+    },
+    300,
+    { trailing: false, leading: true }
+  )
+);
+
+document.addEventListener('scroll', () => {
+  eventCounter.vanilla += 1;
+  vanillaOutput.textContent = eventCounter.vanilla;
 });
 
-removeListenerBtn.addEventListener('click', () => {
-  btn.removeEventListener('click', handleClick);
-  console.log('click event listener was removed from btn');
-});
-removeListenerBtn.addEventListener('click', () => {
-  btn.removeEventListener('click', handleClick);
-  console.log('click event listener was removed from btn');
-});
+document.addEventListener(
+  'scroll',
+  _.throttle(() => {
+    eventCounter.throttled += 1;
+    throttledOutput.textContent = eventCounter.throttled;
+  }, 300)
+);
