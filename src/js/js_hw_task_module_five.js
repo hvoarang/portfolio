@@ -32,7 +32,7 @@ document.addEventListener(
 );
 
 document.addEventListener('scroll', () => {
-  eventCounter.vanilla += 1;
+  eventCounter.vanilla ++ 1;
   vanillaOutput.textContent = eventCounter.vanilla;
 });
 
