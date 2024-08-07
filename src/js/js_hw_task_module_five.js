@@ -41,5 +41,5 @@ document.addEventListener(
   _.throttle(() => {
     eventCounter.throttled += 1;
     throttledOutput.textContent = eventCounter.throttled;
-  }, 300)
+  }, 400)
 );
