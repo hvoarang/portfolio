@@ -43,3 +43,11 @@ document.addEventListener(
     throttledOutput.textContent = eventCounter.throttled;
   }, 400)
 );
+
+function foo() {
+  return 5;
+}
+function foo() {
+  return 6;
+}
+console.log(foo());
