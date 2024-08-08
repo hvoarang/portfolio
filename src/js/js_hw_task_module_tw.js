@@ -192,3 +192,5 @@ function setOutput(e) {
   textOutput.textContent = selectedOptionText;
   valueOutput.textContent = selectedOptionValue;
 }
+
+
