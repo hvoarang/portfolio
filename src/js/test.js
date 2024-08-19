@@ -41,3 +41,15 @@ function getRandomHexColor() {
 
   return;
 }
+
+const obj = {
+  value: 42,
+  getValue: function () {
+    const inner = () => this.value;
+    return inner();
+  },
+};
+console.log(obj.getValue());
+
+let { length } = 5;
+console.log(length);
