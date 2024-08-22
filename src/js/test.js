@@ -51,5 +51,5 @@ const obj = {
 };
 console.log(obj.getValue());
 
-let { length } = 54;
+let { length } = 5;
 console.log(length);
