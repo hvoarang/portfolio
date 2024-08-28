@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <section>
+        <div class="hello">
+          <button class="btn hellobtn">
+            Hello! I'm calc! Push me for start!
+          </button>
+        </div>
+        <div class="calc__place">
+          <div class="reset__space">
+            <input class="input__place"
+              type="text"
+              id="result"
+              placeholder="0"
+              onkeyup="this.value = this.value.replace(/[^\d]/g,'');"
+              autocomplete="off"
+            />
+          </div>
+          <div class="calc">
+            <button class="btn number1" onclick="buttonNum1onclick()">1</button>
+            <button class="btn number2" onclick="buttonNum2onclick()">2</button>
+            <button class="btn number3" onclick="buttonNum3onclick()">3</button>
+            <button class="btn number4" onclick="buttonNum4onclick()">4</button>
+            <button class="btn number5" onclick="buttonNum5onclick()">5</button>
+            <button class="btn number6" onclick="buttonNum6onclick()">6</button>
+            <button class="btn number7" onclick="buttonNum7onclick()">7</button>
+            <button class="btn number8" onclick="buttonNum8onclick()">8</button>
+            <button class="btn number9" onclick="buttonNum9onclick()">9</button>
+            <button class="btn number0" onclick="buttonNum0onclick()">0</button>
+            <button class="btn math__plus" onclick="plus()">+</button>
+            <button class="btn math__minus" onclick="minus()">-</button>
+            <button class="btn math__division" onclick="division()">/</button>
+            <button class="btn math__multi" onclick="multi()">*</button>
+            <button class="btn result__btn" onclick="resultFoo()">=</button>
+            <button class="btn reset" onclick="resetFoo()">C</button>
+            <button class="btn root" onclick="rootFoo()">&#8730</button>
+            <button class="btn tochka" onclick="buttonTochkaonclick()">,</button>
+          </div>
+        </div>
+      </section>
+    </header>
+    <script src="./main.js"></script>
+    <script src="./test.js"></script>
+  </body>
+</html>
