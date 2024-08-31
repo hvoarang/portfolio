@@ -1,3 +1,20 @@
-import { add as sum } from './functions.js';
+const fetchUserFromServer = username => {
+  return new Promise((resolve, reject) => {
+    console.log(`Fetching data for ${username}`);
 
-console.log(sum(2, 13)); // 5
+    setTimeout(() => {
+      // Change value of isSuccess variable to simulate request status
+      const isSuccess = true;
+
+      if (isSuccess) {
+        resolve('success value');
+      } else {
+        reject('error');
+      }
+    }, 2000);
+  });
+};
+
+fetchUserFromServer('petya')
+  .then(user => console.log(user))
+  .catch(error => console.error(error));
