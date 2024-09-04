@@ -39,6 +39,6 @@ indicators.forEach((indicator, i) => {
   });
 });
 
-setInterval(nextSlide, 15000);
+setInterval(nextSlide, 5000);
 
 // =====================
