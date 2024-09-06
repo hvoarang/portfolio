@@ -28,6 +28,9 @@
   },
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "dependencies": {
-    "fs": "^0.0.1-security"
+    "aos": "^2.3.4",
+    "fs": "^0.0.1-security",
+    "sass": "^1.78.0",
+    "scss": "^0.2.4"
   }
 }

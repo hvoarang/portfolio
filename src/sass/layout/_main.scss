@@ -1,6 +1,7 @@
 .hero {
   &::before {
     /*--webkit--*/
+    // display: -webkit-box;
     -webkit-transform: translate(-50%, -50%);
     /*--< /webkit >--*/
 
