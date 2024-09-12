@@ -1,1 +1,0 @@
-{"mappings":"ACCA,QAAQ,GAAG,CADH","sources":["<anon>","src/js/main.js"],"sourcesContent":["let a = 20;\nconsole.log(a);\n\n//# sourceMappingURL=index.43bbecb8.js.map\n","let a = 20;\nconsole.log(a);\n"],"names":["console","log"],"version":3,"file":"index.43bbecb8.js.map"}
