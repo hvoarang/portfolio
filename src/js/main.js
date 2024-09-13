@@ -1,2 +1,2 @@
-let a = 220;
+let a = 1220;
 console.log(a);
