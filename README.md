@@ -1,2 +1,2 @@
 hello hello hello hello hello hell hello hello hello hello hello hello hell
-hello git git add . git comm
+hello git git add . g
