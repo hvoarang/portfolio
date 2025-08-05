@@ -2,4 +2,4 @@
 "new cm" gitgit add .
 git commit vfvgit add .
 git commit -m "new cm"
-git push
+git pushdf
