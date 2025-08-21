@@ -1,3 +1,2 @@
 !Serch git add . git commit -m "new cm" git push git add . git commit -m "new
-cm" gitgit add .git add . git commit -m "new cm" git pushф ЫВА
-ывм
+cm" gitgit add .git
