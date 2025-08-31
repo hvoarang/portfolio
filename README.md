@@ -1,2 +1,2 @@
 git add . git commit -m "new cm" git push git add . git commit -m "new cm" git
-pushgit add . git commit -m "new cm" git push
+pushggit add . git commit -m "new cm" git push
